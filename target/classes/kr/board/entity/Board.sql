@@ -35,11 +35,13 @@ select * from board;
 --테이블에 값 넣기 
 insert into board(title, content, writer)
 values('스프링 게시판','오늘 처음 써봅니다..','김현정');
-
+values('스프링 게시판','오늘 처음 써봅니다..','김현정');
+values('스프링 게시판','오늘 처음 써봅니다..','김현정');
 --board테이블에 회원 아이디 컬럼 추가
 alter table board add memId varchar(50);
 
 --------------
+select * from vp112;
 
 
 --테이블삭제

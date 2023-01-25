@@ -7,6 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="<c:url value='${cpath}/resources/images/favicon.ico'/>" type="image/x-icon"/>
+  <link rel="icon" href="<c:url value='${cpath}/resources/images/favicon.ico'/>" type="image/x-icon"/> 
+
+
 </head>
 <body>
 

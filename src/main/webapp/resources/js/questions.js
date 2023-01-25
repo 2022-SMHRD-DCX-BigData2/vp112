@@ -1,4 +1,7 @@
+	
 import { questions } from './data.js'
+
+console.log("questions.js 실행됨")
 
 // 질문 각요소 찾기
 const progressValueEl = document.querySelector('.progress .value')
@@ -31,10 +34,13 @@ function nextQuestion(choiceNumber) {
   currentNumber = currentNumber + 1
   renderQuestion()
 }
+
 // 결과 페이지 이동
 function showResultPage() {
-  location.href = '/results.html?AnswersResult=' + AnswersResult
+	location.href = '/smhrd/questionResults.do?AnswersResult=' + AnswersResult;
+			
 }
+
 
 // '답변1' 혹은 '답변2'를 클릭했을 때 동작하는 코드
 choice1El.addEventListener('click', function () {

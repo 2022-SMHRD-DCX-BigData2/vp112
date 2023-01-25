@@ -15,9 +15,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script defer src="${cpath}/resources/js/basic.js"></script>
-
+  <!-- 파비콘 -->
+  <link rel="icon" href="${cpath}/resources/images/favicon.png">
   <title>메인페이지 입니다</title>
-   
+
+  
 </head>
 <body>
 

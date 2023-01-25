@@ -18,8 +18,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
   <title>보이스피싱 모의체험!</title>
- <!--파비콘 -->
-  <link rel="icon" href="${cpath}/resources/images/favicon.png">
+  
+
+
+
 
   <script type="text/javascript">
 	

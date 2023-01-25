@@ -6,7 +6,6 @@ public class Member {
 	private String memPw;
 	private String memName;
 	
-
 	public String getMemId() {
 		return memId;
 	}

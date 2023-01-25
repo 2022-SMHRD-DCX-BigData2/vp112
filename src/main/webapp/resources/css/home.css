@@ -1,9 +1,17 @@
 body {
-  background-color: #F6FCFF;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+
+.sub{
+  margin-top: 60px;
   background-image: url("../images/main_bg.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
+
+  
 .character {
   max-width: 364px;
   width: 100%;

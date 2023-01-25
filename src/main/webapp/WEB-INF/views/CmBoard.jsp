@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script defer src="./resources/js/basic.js"></script>
   
   <title>보이스피싱 커뮤니티 메뉴</title>
 
@@ -24,7 +23,7 @@
   	});
 
 	function boardList() {
-  		console.log("basic실행되면 로그에 보이게!")
+  		console.log("실행되면 로그에 보이게!")
   		$.ajax({
 	  			url : "${cpath}/board",
 	  			type : "get",
@@ -37,7 +36,7 @@
 	} //boardList함수 끝
 	
 	function callBack(data) { 
-		//alert("데이터 통신 확인");
+		console.log("데이터 통신 확인!");
 		console.log(data) 
 
 		var bList = "<table class='table table-hover table-bordered'>"; 
@@ -176,7 +175,6 @@
 <%@ include file="header.jsp" %>
 
 <h2>금융커뮤니티 메뉴 페이지 입니다</h2>
- 
 <!--게시판 -->
 <div class="container">
  <div class="panel panel-default">

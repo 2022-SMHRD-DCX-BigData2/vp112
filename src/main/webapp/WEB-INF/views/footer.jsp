@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script defer src="./resources/js/basic.js"></script>
 
   <title>보이스피싱 모의체험!</title>
  

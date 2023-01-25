@@ -1,5 +1,7 @@
 import { results, AnswersResults } from './data.js'
 
+console.log("results.js 실행됨")
+
 const AnswersResult = new URLSearchParams(location.search).get('AnswersResult')
 //console.log(AnswersResult)
 

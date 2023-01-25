@@ -8,20 +8,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import kr.board.entity.Member;
 import kr.board.mapper.BoardMapper;
-import kr.board.mapper.MemberMapper;
-
 
 @Controller
 public class MemberController {
 
 	@Autowired
-	private MemberMapper Mmapper;
+	private BoardMapper mapper;
 	
 	@PostMapping("/Login.do")
-
 	public String Login(Member mvo, HttpServletRequest request) {
 		// 로그인 기능 - 해당 아이디, 비번 일치하는 회원정보 세션에 저장
-		Member loginMember = Mmapper.memberLogin(mvo);
+		Member loginMember = mapper.memberLogin(mvo);
 		//로그인 정보가 있으면 세션에 저장
 		if(loginMember != null) {
 			//세션 객체 생성

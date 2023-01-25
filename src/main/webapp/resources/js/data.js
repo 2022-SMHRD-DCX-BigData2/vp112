@@ -2,7 +2,7 @@
 export const questions = [
   {
     number: '01',
-    question: 'oo은행입니다. ooo님 맞으신가요?',
+    question: 'ooo검찰청 수사기관(사칭)입니다. ooo고객님 맞으신가요?',
     choices: [
       { text: '무슨일인가요?', value: 'x' },
       { text: '무슨일인가요?', value: 'o' },
@@ -42,12 +42,12 @@ export const questions = [
   },
 ]
 
-
+		
 //질문에 대한 결과 데이터 0, 1
 export const results = [
   {
     title: '바람결에 이리저리 흔들리는<br>갈대형!',
-    character: '/images/result_character1.png',
+    character: './resources/images/result_character1.png',
     results: [ //총 4개의 결과가 있음
       '"누르고, 받고, 알려주고"',
       '달콤한 유혹에 아무런 의심이 없네요.',
@@ -56,13 +56,13 @@ export const results = [
     ],
     VpResults: ['갈대형♬', '대나무형'],
     //배너 이미지
-    lectureImg: '/images/result_lecture1.png',
+    lectureImg: './resources/images/result_lecture4.png',
     //배너 링크
-    lectureUrl: 'https://www.fss.or.kr/fss/main/main.do'
+    lectureUrl: 'https://www.dgpolice.go.kr/dgpo/bbs/view.do?bbsId=vocpr200207&num=36'
   },
   {
     title: '굽히지 않고 푸르른<br>대나무형',
-    character: '/images/result_character2.png',
+    character: './resources/images/result_character2.png',
     results: [
       '철두철미한 당신!!<br>그 어떤 달콤한 유혹이 눈앞에 있어도',
       '항상 의심 하고 조심하고 또 조심하네요.',
@@ -70,8 +70,8 @@ export const results = [
       '몸에 배어 있다면 당신은 금융사기로부터<br>안전할 수 있습니다.'
     ],
     VpResults: ['갈대형', '대나무형♬'],
-    lectureImg: '/images/result_lecture2.png',
-    lectureUrl: 'https://www.fss.or.kr/fss/main/main.do'
+    lectureImg: './resources/images/result_lecture3.png',
+    lectureUrl: 'https://www.ebs.co.kr/tv/show?prodId=135339&lectId=60038104'
   }
 ]
 
@@ -86,6 +86,7 @@ export const AnswersResults = {
   oxxx : 0,
   xxxx : 0,
   xoox : 0,
+  oxox : 0,
 
   //대나무형 = 마지막 질문 index 1 선택한 경우 
   oooo : 1,

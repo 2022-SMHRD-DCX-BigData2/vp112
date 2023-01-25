@@ -31,5 +31,8 @@ public interface BoardMapper {
 	@Update("update vp112 set count=count+1 where idx=#{idx}") 
 	public void updateCount(int idx);
 
-
+	
+	
+	//회원정보
+	public Member memberLogin(Member mvo);
 }

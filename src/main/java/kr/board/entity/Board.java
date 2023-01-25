@@ -3,8 +3,7 @@ package kr.board.entity;
 
 public class Board {
 	
-	//기왕이면 SQL의테이블 이름과 같게 짖는다
-	//VO에서 필드라고 부르거나 속성 이거나 프로퍼티라고 부름
+	// SQL의테이블 이름과 같게 짖는다
 	//게시글 번호, 제목, 내용, 작성자, 작성일, 조회수를 가지는 게시판 만들기
 	private int idx;
 	private String title;
@@ -15,8 +14,6 @@ public class Board {
 	private String memId; 
 	
 	
-	//스프링에서는 기본생성자를 만들필요 없음, public class 'Board'의  객체의 내용이면 담아줄 수 있다
-	//getter,setter 만들기. 단축키 ait+shift+s
 	public int getIdx() {
 		return idx;
 	}

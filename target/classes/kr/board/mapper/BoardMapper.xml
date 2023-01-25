@@ -32,5 +32,13 @@
       update vp112 set content=#{content} where idx=#{idx}
   </update>
 
+  
+  
+  <select id="memberLogin" parameterType="kr.board.entity.Member"
+    resultType="kr.board.entity.Member">
+    select * from member where memId=#{memId} and memPw=#{memPw}
+  </select>
+  
+
 
 </mapper>

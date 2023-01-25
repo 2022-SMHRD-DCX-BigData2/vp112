@@ -11,19 +11,39 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="${cpath}/resources/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="${cpath}/resources/css/common.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/results.css">
+  
+  <script type="module" src="${cpath}/resources/js/share.js"></script>
+  <script type="module" src="${cpath}/resources/js/results.js"></script>
+  
+  <!-- 파비콘 -->
+  <link rel="icon" href="${cpath}/resources/images/favicon.png"> 
 
   <title>보이스피싱 모의체험 페이지3(결과)입니다</title>
+  
+  <script type="text/javascript">
+	$(document).ready(function(){
+  		TEST();
+  	});
+	function TEST() {
+  		console.log("실행되면 로그에 보이게!")
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-  <link rel="stylesheet" href="${cpath}/resources/css/common.css">
-  <link rel="stylesheet" href="${cpath}/resources/css/questions.css">
-  <script type="module" defer src="${cpath}/resources/js/questions.js"></script>
- 
+	}
+  </script>
   
 </head>
 <body>
+
+<!-- header 메뉴불러오기 -->
+<%@ include file="header.jsp" %>
+
+
   <h2 class="page-subtitle">
     내 결과는?
   </h2>
@@ -57,12 +77,16 @@
   </div>
 
 <!-- 주소 복사 + 얼럿창 나타나는 함수=> share.js파일, share-or-copy클래스 선택 -->
-  <div class="btn btn-btn2 btn-small share-or-copy">
+  <div class="Qbtn Qbtn-btn2 Qbtn-small share-or-copy">
     모의체험 결과 공유하기
   </div>
 
-  <a href="/index.html" class="btn btn-btn3 btn-small">
+  <a href="${cpath}/questionMain.do" class="Qbtn Qbtn-btn3 Qbtn-small">
     모의체험 다시하기
   </a>
+  
+<!-- footer.jsp 메뉴불러오기 -->
+<%@ include file="footer.jsp" %>
+  
 </body>
 </html>
