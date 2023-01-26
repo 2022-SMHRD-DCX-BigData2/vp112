@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd
+   http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd"
+   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+   >
+
+	<!-- 히카리cp빈 등록 : bean은 객체를 생성하는 태그  -->
+		<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+			<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+			<!-- jdbc:mysql://project-db-stu.ddns.net:3307/vp112?useSSL=false&serverTimezone=UTC -->
+			<property name="jdbcUrl" value="jdbc:mysql://project-db-stu.ddns.net:3307/vp112?useSSL=false&amp;serverTimezone=UTC"/>
+			<property name="username" value="vp112"/>
+			<property name="password" value="vp112*"/>
+		</bean>
+		
+	<!-- 커넥션풀을 만드는  역할 / 히카리 cp설정 -->
+		<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+			<constructor-arg ref="hikariConfig"/> 
+		</bean>
+
+				<!-- 연결시켜주는 클래스  -->
+		<bean class="org.mybatis.spring.SqlSessionFactoryBean">
+		    <property name="dataSource" ref="dataSource" />
+		</bean>
+		
+		<!--scan : 사용할 수 있도록 BoardMapper 인터페이스를  메모리에 올린다-->
+		<mybatis-spring:scan base-package="kr.board.mapper"/>
+		
+
+</beans>
