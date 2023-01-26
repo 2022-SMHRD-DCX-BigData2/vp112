@@ -17,7 +17,7 @@
  
   <link rel="stylesheet" href="${cpath}/resources/css/common.css">
   <link rel="stylesheet" href="${cpath}/resources/css/home.css">
-  
+  <script type="module" src="${cpath}/resources/js/share.js"></script>
   <script type="module" src="${cpath}/resources/js/questions.js"></script>
    
    <!-- 파비콘 -->
