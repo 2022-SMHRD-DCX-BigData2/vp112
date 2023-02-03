@@ -22,7 +22,9 @@
   
 </head>
 <body>
-    <div class="panel-footer">(사)스마트인재개발원</div>
-
+	<footer class="container-fluid navbar-fixed-bottom">
+		<p>(사)스마트인재개발원</p>
+	</footer>
+    <!-- <div class="panel-footer">(사)스마트인재개발원</div> -->
 </body>
 </html>

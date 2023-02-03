@@ -81,7 +81,7 @@
     모의체험 결과 공유하기
   </div>
 
-  <a href="${cpath}/questionMain.do" class="Qbtn Qbtn-btn3 Qbtn-small">
+  <a href="${cpath}/questionMain.do" class="Qbtn Qbtn-btn2 Qbtn-small share-or-copy">
     모의체험 다시하기
   </a>
   

@@ -3,6 +3,7 @@
 body {
   font-family: "Pretendard Variable", sans-serif;
   word-break: keep-all;
+  display: block;
 }
 
 
@@ -14,8 +15,8 @@ img {
 }
 .page-title {
   margin-bottom: 20px;
-  font-size: 50px;
-  font-weight: 800;
+  font-size: 42px;
+  font-weight: 700;
   line-height: 1.3;
   color: #350239;
   text-align: center;
@@ -33,11 +34,11 @@ img {
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   color: #5f028d;
 }
 .Qbtn {
-  max-width: 500px;
+  max-width: 400px;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -46,40 +47,41 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 50px;
+  font-weight: 400;
+  font-size: 42px;
   line-height: 1.4;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
   user-select: none;
   transition: 0.1s;
+  padding: 15px;
 }
 .Qbtn-btn1 { /* 모의체험하기 */
-  background-color: #5f77e4;
-  box-shadow: 0 14px 0 #000a9a;
+  background-color: #1a3ac6;
+  box-shadow: 10px 5px 5px #667cd6;
   color: #FFFFFF;
 }
 .Qbtn-btn1:active {
-  box-shadow: 0 4px 0 #5f028d;
+  box-shadow: 10px 5px 5px #667cd6;
   transform: translateY(10px);
 }
 .Qbtn-btn2 { /*모의체험 링크 공유하기  */
   background-color: #1a3ac6;
-  box-shadow: 0 14px 0 #010537;
+  box-shadow:10px 5px 5px #667cd6;
   color: #FFFFFF;
 }
 .Qbtn-btn2:active {
-  box-shadow: 0 4px 0 #c21cec;;
+  box-shadow: 10px 5px 5px #667cd6;
   transform: translateY(10px);
 }
 .Qbtn-btn3 { /* 모의체험 */
   background-color: #F2F4F6;
-  box-shadow: 0 14px 0 #DFE1E2;
+  box-shadow: 10px 5px 5px #667cd6;
   color: #444444;
 }
 .Qbtn-btn3:active {
-  box-shadow: 0 4px 0 #DFE1E2;
+  box-shadow: 10px 5px 5px #667cd6;
   transform: translateY(10px);
 }
 
@@ -88,6 +90,12 @@ img {
   height: 70px;
   margin-bottom: 30px;
   font-size: 26px;
+}
+
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 /* 미디어쿼리 : 브라우저 작아지면 어떤 CSS을 추가할지 지정 */

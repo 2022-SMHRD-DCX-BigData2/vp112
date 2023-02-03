@@ -174,7 +174,7 @@
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
 
-<h2>금융커뮤니티 메뉴 페이지 입니다</h2>
+<h2 style="text-align: center;">금융커뮤니티 메뉴 페이지 입니다</h2>
 <!--게시판 -->
 <div class="container">
  <div class="panel panel-default">

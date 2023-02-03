@@ -31,26 +31,25 @@
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
 
+<h1 class="page-title">
+   모의체험하기
+</h1>
 
-<div class="sub">	 
-
+<div class="sub" style="margin-top: 0;">	 
+  <br>
   <h2 class="page-subtitle">
-	    스마트인재개발원<br>
-	  Final Project
+	    스마트인재개발원
   </h2>
+  <br><br><br>
 
-  <h1 class="page-title">
-	    보이스 피싱<br>
-	    모의체험하기
-  </h1>
 
   <img src="${cpath}/resources/images/main_character.png" alt="휴대폰 이미지" class="character">
    
   <a href="${cpath}/questions.do" class="Qbtn Qbtn-btn1">
 	    모의체험 하기
   </a>
-  <div class="Qbtn Qbtn-btn2 Qbtn-small share-or-copy">
-    	모의체험 링크 공유하기
+  <div class="Qbtn Qbtn-btn1 share-or-copy">
+            링크 공유하기
   </div>
 </div>
 

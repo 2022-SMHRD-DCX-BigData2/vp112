@@ -77,7 +77,11 @@ public class BoardController {
 		return "questionResults";
 	}
 	
-	
+	//금융예방교육 메뉴 요청
+	@RequestMapping("/edu.do")
+	public String edu(){
+		return "edu";
+	}
 
 	
 	//커뮤니티게시판 메뉴 요청
