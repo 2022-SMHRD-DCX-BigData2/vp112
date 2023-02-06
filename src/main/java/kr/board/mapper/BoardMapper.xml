@@ -4,6 +4,75 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="kr.board.mapper.BoardMapper">
+
+    
+    
+    
+  <select id="ViboardList" resultType="kr.board.entity.Board"> 
+      select * from tbl_community
+  </select>
+  
+  <insert id="ViboardInsert" parameterType="kr.board.entity.Board">
+    insert into tbl_community(title, content, writer, memId)
+ 	values (#{title},#{content},#{writer},#{memId})
+  </insert>
+  
+  <select id="ViboardContent" parameterType="int" 
+      resultType="kr.board.entity.Board"> 
+      select * from tbl_community where idx=#{idx}
+  </select>
+  
+  <update id="ViboardUpdate" parameterType="kr.board.entity.Board">
+      update tbl_community set title=#{title}, content=#{content}
+      where idx=#{idx}
+  </update>
+
+  <delete id="ViboardDelete" parameterType="int">     
+      delete from tbl_community where idx=#{idx}
+  </delete>
+
+  <update id="ViboardContentUpdate" parameterType="kr.board.entity.Board">
+      update tbl_community set content=#{content} where idx=#{idx}
+  </update>
+
+    
+
+
+    
+  
+  <select id="boardList2" resultType="kr.board.entity.Board"> 
+      select * from board
+  </select>
+  
+  <insert id="boardInsert2" parameterType="kr.board.entity.Board">
+    insert into board(title, content, writer, memId)
+ 	values (#{title},#{content},#{writer},#{memId})
+  </insert>
+  
+  <select id="boardContent2" parameterType="int" 
+      resultType="kr.board.entity.Board"> 
+      select * from board where idx=#{idx}
+  </select>
+  
+  <update id="boardUpdate2" parameterType="kr.board.entity.Board">
+      update board set title=#{title}, content=#{content}
+      where idx=#{idx}
+  </update>
+
+  <delete id="boardDelete2" parameterType="int">     
+      delete from board where idx=#{idx}
+  </delete>
+
+  <update id="boardContentUpdate2" parameterType="kr.board.entity.Board">
+      update board set content=#{content} where idx=#{idx}
+  </update>
+  
+  
+    
+    
+  
+  
+  
     
   <select id="boardList" resultType="kr.board.entity.Board"> 
       select * from vp112
@@ -31,14 +100,5 @@
   <update id="boardContentUpdate" parameterType="kr.board.entity.Board">
       update vp112 set content=#{content} where idx=#{idx}
   </update>
-
-  
-  
-  <select id="memberLogin" parameterType="kr.board.entity.Member"
-    resultType="kr.board.entity.Member">
-    select * from member where memId=#{memId} and memPw=#{memPw}
-  </select>
-  
-
 
 </mapper>

@@ -34,8 +34,8 @@
   		location.href="${cpath}/login.do";
   	}
   	
-  	function SignUp(){
-  		location.href="${cpath}/SignUp.do";
+  	function register(){
+  		location.href="${cpath}/register.do";
   	}
   	
   </script>
@@ -54,7 +54,7 @@
   			</a>
 		</li>
       </ul>
-    </div>
+    
     <ul class="nav navbar-nav" style="background-color:#000cff">
       <li><a href="${cpath}/questionMain.do" style="color:#ffffff;">VP모의체험</a></li>
       <li><a href="${cpath}/#" style="color:#ffffff;">VP확률검사</a></li>
@@ -62,45 +62,36 @@
       <li><a href="${cpath}/edu.do" style="color:#ffffff;">금융예방교육</a></li>
       <li><a href="${cpath}/CmBoard.do" style="color:#ffffff;">금융커뮤니티</a></li>
     </ul>
+    
+<c:choose>
+	<c:when test="${empty loginMember}">    
     <ul class="nav navbar-nav navbar-right">
       <li>
-      	<a href="#" class="btn" role="button" onclick="SignUp()" style="color:#ffffff;">
+      	<a href="#" class="btn" role="button" onclick="register()" style="color:#ffffff;">
       		<span class="glyphicon glyphicon-user"></span> 회원가입
    		</a>
 	  </li>
       <li>
       	<a href="#" class="btn" role="button" onclick="login()" style="color:#ffffff;">
       		<span class="glyphicon glyphicon-log-in"></span> 로그인
-      		<!-- <span class="glyphicon glyphicon-log-out"></span> Logout -->
       	</a>
       </li>
     </ul>
+  </c:when>
+  	<c:otherwise>
+      	<a href="${cpath}/mypage.do" class="btn" role="button" style="color:#ffffff;">
+      		<span class="glyphicon glyphicon-log-in"></span> 마이페이지
+      	</a>
+      	<a href="${cpath}/mypage.do" class="btn" role="button" onclick="Logout()" style="color:#ffffff;">
+      		<span class="glyphicon glyphicon-log-in"></span> 로그아웃
+      	</a>      	
+	</c:otherwise>
+</c:choose>  
   </div>
 </nav>
 
 
 
-<%-- <div class="container text-center" style="background-color:whitesmoke;">
-	<div class="row justify-content-md-center" style="align-item:center;">
-		<div class="col col-lg-2">
-		
-		</div>
-		
-		<div class="col-md-auto">
-		  <a href="${cpath}/main.do">home</a>
-		  <a href="${cpath}/questionMain.do">VP모의체험</a>
-		  <a href="${cpath}/sub.do">VP확률검사</a> 
-		  <a href="https://gbpolice-preventphishing.kr/doc/save.php">피해예방수칙</a> 
-		  <a href="${cpath}/sub.do">금융예방교육</a>   <!-- 동영상게시판 -->
-		  <a href="${cpath}/CmBoard.do">금융커뮤니티</a>   <!-- 게시판 -->
-	  	</div>
-	  	
-		<div class="col col-lg-2">
-		  <button type="button" class="btn-default" onclick="login()">로그인</button>
-		  <button type="button" class="btn-default" onclick="SignUp()">회원가입</button>	
-		</div>	
-	</div>
-</div> --%>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>

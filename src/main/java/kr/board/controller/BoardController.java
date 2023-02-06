@@ -1,18 +1,13 @@
 package kr.board.controller;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import kr.board.entity.Board;
+import kr.board.entity.TblMember;
 import kr.board.mapper.BoardMapper;
 
 @Controller
@@ -22,37 +17,17 @@ public class BoardController {
 	//보드맵퍼를 맵퍼 로 가져다 쓸거다
 	private BoardMapper mapper;
 	
-//	@GetMapping("/main.do")
-//	public String main() {
-//		//webapp/WEB-INF/views에 있는 jsp로 이동
-//		return "main";
-//	}
-
-	
+	//메인 요청
 	@RequestMapping("/main.do")
-	public void main() {}
-	//디폴트 경로로 메소드의 이름과같은 view를 연결해준다.
-	
- 
-	
-	//로그인 요청
-	@GetMapping("/login.do")
-	public String login() {
-		return "login";
+	public String main(Model model, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if(session.getAttribute("loginMember") != null) {
+			TblMember loginMember = (TblMember) session.getAttribute("loginMember");
+			System.out.println("id : " + loginMember.getMemId());
+		}
+		return "main";
 	}
-	//회원가입 요청
-	@GetMapping("/SignUp.do")
-	public String SignUp(){
-		return "SignUp";
-	}
-	//로그인 등록버튼 요청- id,pw데이터가 넘어옴
-	@RequestMapping("/LoginInsert.do")
-	public String LoginInsert(){
-		return "LoginInsert";
-	}
-		
-	
-	
+
 	
 	
 	//서브메뉴 요청
@@ -60,6 +35,7 @@ public class BoardController {
 	public String sub(){
 		return "sub";
 	}
+	
 	
 	
 	//모의체험 메뉴 요청
@@ -71,22 +47,37 @@ public class BoardController {
 	public String questions(){
 		return "questions";
 	}	
-	
 	@RequestMapping("/questionResults.do")
 	public String questionResults(){
 		return "questionResults";
 	}
+	
 	
 	//금융예방교육 메뉴 요청
 	@RequestMapping("/edu.do")
 	public String edu(){
 		return "edu";
 	}
-
 	
-	//커뮤니티게시판 메뉴 요청
+	
+	
+	//금융예방교육 게시판 메뉴 요청
+	@RequestMapping("/ViBoard.do")
+	public String ViBoard(){
+		return "ViBoard";
+	}
+	
+	//금융커뮤니티 게시판 메뉴 요청
 	@RequestMapping("/CmBoard.do")
 	public String CmBoard(){
 		return "CmBoard";
 	}
+	
+	//게시판 테스트용~~
+	@RequestMapping("/ViBoardTest.do")
+	public String ViBoardTest(){
+		return "ViBoardTest";
+	}	
+	
+	
 }
