@@ -10,7 +10,9 @@
 		<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 			<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 			<!-- jdbc:mysql://project-db-stu.ddns.net:3307/vp112?useSSL=false&serverTimezone=UTC -->
-			<property name="jdbcUrl" value="jdbc:mysql://project-db-stu.ddns.net:3307/vp112?useSSL=false&amp;serverTimezone=UTC"/>
+			<property name="jdbcUrl" value="jdbc:mysql://project-db-stu.ddns.net:3307/vp112?useSSL=false
+			    &amp;allowPublicKeyRetrieval=true
+			    &amp;serverTimezone=UTC"/>
 			<property name="username" value="vp112"/>
 			<property name="password" value="vp112*"/>
 		</bean>
@@ -20,7 +22,7 @@
 			<constructor-arg ref="hikariConfig"/> 
 		</bean>
 
-				<!-- 연결시켜주는 클래스  -->
+		<!-- 연결시켜주는 클래스  -->
 		<bean class="org.mybatis.spring.SqlSessionFactoryBean">
 		    <property name="dataSource" ref="dataSource" />
 		</bean>
