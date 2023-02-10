@@ -13,12 +13,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="${cpath}/resources/css/index.css">
-  <link rel="stylesheet" href="${cpath}/resources/css/common.css">
-  <link rel="stylesheet" href="${cpath}/resources/css/home.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
   		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  		
+  <link rel="stylesheet" href="${cpath}/resources/css/home.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/common.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/index.css">
+  
   <script type="module" src="${cpath}/resources/js/share.js"></script>
   <script type="module" src="${cpath}/resources/js/questions.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
