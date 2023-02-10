@@ -5,15 +5,20 @@
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/common.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/home.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  
+  <script type="module" src="${cpath}/resources/js/share.js"></script>
+  <script type="module" src="${cpath}/resources/js/questions.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   
   <title>보이스피싱 커뮤니티 메뉴</title>
 
@@ -39,18 +44,21 @@
 		console.log("데이터 통신 확인!");
 		console.log(data) 
 
-		var bList = "<table class='table table-hover table-bordered'>"; 
+		var bList = "<table class='table table-hover'>"; 
+		bList += "<thead>";
 		bList += "<tr>";
-		bList += "<td>번호</td>";
-		bList += "<td>제목</td>";
-		bList += "<td>작성자</td>";
-		bList += "<td>작성일</td>";
-		bList += "<td>조회수</td>";
-		bList += "<tr>";
+		bList += "<th>번호</th>";
+		bList += "<th>제목</th>";
+		bList += "<th>작성자</th>";
+		bList += "<th>작성일</th>";
+		bList += "<th>조회수</th>";
+		bList += "</tr>";
+		bList += "</thead>";
+		bList += "<tbody class='table-group-divider'>";
 		
 		$.each(data,(index,obj)=>{ //이문법 원래 오류라고 나오는게 맞다. 오류 아닌데 이클립스가 오류로 인식함
 			bList += "<tr>";
-			bList += "<td>" + obj.idx + "</td>"; 
+			bList += "<th>" + obj.idx + "</th>"; 
 			bList += "<td><a href='javascript:cview(" + obj.idx + ")'>" + obj.title + "</a></td>";
 			bList += "<td>" + obj.writer + "</td>";
 			bList += "<td>" + obj.indate + "</td>";
@@ -62,7 +70,7 @@
 	        bList += "<td>내용</td>"; 
 	        bList += "<td colspan='4'>";
 	        bList += "<textarea class='form-control' row='7' id='nc" + obj.idx + "'>" +  obj.content + "</textarea>";
-	        
+		
 	        //로그인 정보와, 데이터 memId가 같으면 수정 삭제 가능
 	        if("${loginMember.memId}" == obj.memId){
 		        bList += "<button class='btn btn-sm btn-warning' onclick='goUpdate(" + obj.idx + ")'>수정</button>";
@@ -78,9 +86,10 @@
 		
 		bList += "<tr>";
 		bList += "<td colspan='5'>";
-		bList += "<button class='btn btn-sm btn-info' onclick='goForm()'>글쓰기</button>";
+		bList += "<button class='Cbtn' onclick='goForm()'>글쓰기</button>";
 		bList += "</td>";
 		bList += "</tr>";
+		bList += "</tbody>";
 		
 		bList += "</table>";
 		$("#list").html(bList); 
@@ -170,11 +179,11 @@
 
 
 </head>
-<body>
+<body style="height: inherit;">
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
 
-<h2 style="text-align: center;">금융커뮤니티 메뉴 페이지 입니다</h2>
+<h1 class="page-title">커뮤니티</h1>
 <!--게시판 -->
 <div class="container">
  <div class="panel panel-default">
@@ -183,19 +192,16 @@
     
 	    <form class="form-horizontal" id="frm" >
 			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="title">제목:</label>
 			    <div class="col-sm-10">
-			      <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력하세요">
+			      <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력하세요" maxlength="20">
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="content">내용:</label>
 			    <div class="col-sm-10">
-			      <textarea class="form-control" name="content" rows="10" id="content"></textarea>
+			      <textarea class="form-control" name="content" rows="10" id="content" placeholder="내용을 입력하세요"></textarea>
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="writer">작성자:</label>
 			    <div class="col-sm-10">
 			      <input type="text" readonly="readonly" class="form-control" name="writer" id="writer" value="${loginMember.memName}">
 			      <input type="hidden" name="memId" value="${loginMember.memId}">
@@ -204,7 +210,7 @@
 			  <div class="form-group">
 			    <div class="col-sm-offset-2 col-sm-10">
 			      <button type="button" class="btn btn-default" onclick="insertFn()">등록</button>
-			      <button type="reset" class="btn btn-default" id="reset">취소</button>
+			      <a class="btn btn-default" role="button" href="${cpath}/CmBoard.do">취소</a>
 			    </div>
 			  </div>
 		</form>
