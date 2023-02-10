@@ -201,17 +201,21 @@
 	    <form class="form-horizontal" id="frm" >
 			  <div class="form-group">
 			    <div class="col-sm-10">
-		         <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력하세요" maxlength="20">
+		         <input type="text" class="form-control" name="commTitle" id="commTitle" placeholder="제목을 입력하세요" maxlength="20">
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <div class="col-sm-10">
-			      <textarea class="form-control" name="content" rows="10" id="content" placeholder="내용을 입력하세요"></textarea>
+			      <textarea class="form-control" name="commContent" rows="10" id="commContent" placeholder="내용을 입력하세요"></textarea>
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <div class="col-sm-10">
-			      <input type="text" readonly="readonly" class="form-control" name="writer" id="writer" value="${loginMember.memName}">
+			      <input type="text" readonly="readonly" class="form-control" name="commWriter" id="commWriter" value="${loginMember.memName}">
+			      
+			      <input type="hidden"  class="form-control" name="commWriter" id="commWriter">
+			      <input type="hidden"  class="form-control" name="commFile" id="commFile" value="test">
+			      
 			      <input type="hidden" name="mem_id" value="${loginMember.mem_id}">
 			    </div>
 			  </div>

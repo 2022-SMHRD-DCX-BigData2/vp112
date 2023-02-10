@@ -40,7 +40,7 @@
   </select>
   
   <insert id="CmboardInsert" parameterType="kr.board.entity.TblCommunity">
-    insert into tbl_community(commTitle, commContent, commWriter, mem_id)
+    insert into tbl_community(commTitle, commContent, commWriter, mem_id )
  	values (#{commTitle},#{commContent},#{commWriter},#{mem_id})
   </insert>
   
