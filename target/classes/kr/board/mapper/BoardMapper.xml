@@ -6,7 +6,7 @@
 <mapper namespace="kr.board.mapper.BoardMapper">
 
  <select id="boardList2" resultType="kr.board.entity.Board"> 
-      select * from board
+	select * from board
   </select>
   
   <insert id="boardInsert2" parameterType="kr.board.entity.Board">
@@ -34,9 +34,10 @@
   
   
     
-   <!-- 커뮤니티 2  ####################-->  
+   <!-- 커뮤니티   ####################-->  
   <select id="CmboardList" resultType="kr.board.entity.TblCommunity"> 
-      select * from tbl_community
+	SELECT commIdx, commTitle, commContent,commWriter, date_format(commDate,"%Y/%m/%d") AS commDate, commViews
+	FROM tbl_community;
   </select>
   
   <insert id="CmboardInsert" parameterType="kr.board.entity.TblCommunity">

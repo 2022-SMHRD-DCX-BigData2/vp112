@@ -18,7 +18,7 @@ public class TblCommunity {
     private String commFile;
 
     // 글 작성일자 
-    private Timestamp commDate;  //indate
+    private String commDate;  //indate
 
     // 회원  아이디 
     private String mem_id; // id
@@ -64,11 +64,11 @@ public class TblCommunity {
         this.commFile = commFile;
     }
 
-    public Timestamp getCommDate() {
+    public String getCommDate() {
         return commDate;
     }
 
-    public void setCommDate(Timestamp commDate) {
+    public void setCommDate(String commDate) {
         this.commDate = commDate;
     }
 

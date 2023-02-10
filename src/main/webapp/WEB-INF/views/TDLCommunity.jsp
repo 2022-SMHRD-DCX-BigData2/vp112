@@ -65,12 +65,11 @@
 		
 		$.each(data,(index,obj)=>{ //이문법 원래 오류라고 나오는게 맞다. 오류 아닌데 이클립스가 오류로 인식함
 			bList += "<tr>";
-			bList += "<th>" + obj.idx + "</th>"; 
+			bList += "<th>" + obj.commIdx + "</th>"; 
 			bList += "<td><a href='javascript:cview(" + obj.commIdx + ")'>" + obj.commTitle + "</a></td>";
-			bList += "<td>" + obj.mem_id + "</td>";
+			bList += "<td>" + obj.commWriter + "</td>";
 			bList += "<td>" + obj.commDate + "</td>";
-			/* indatas = obj.indate
-			bList += "<td><fmt:formatDate value='${indatas.regdate}' pattern='yyyy.MM.dd'/> </td>"; */
+			console.log(obj.commDate);
 			bList += "<td id='count" + obj.commIdx + "'>" + obj.commViews + "</td>";
 			bList += "</tr>";
 			
