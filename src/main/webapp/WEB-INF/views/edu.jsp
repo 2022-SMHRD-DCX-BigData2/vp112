@@ -10,14 +10,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="${cpath}/resources/css/common.css">
   <link rel="stylesheet" href="${cpath}/resources/css/home.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   
 
   <!-- 파비콘 -->
@@ -28,208 +26,111 @@
 
 <%@ include file="header.jsp" %>
 
-<section class="py-5">
-  <div class="container px-4 px-lg-5 mt-5">
-      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Fancy Product</h5>
-                          <!-- Product price-->
-                          $40.00 - $80.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                  </div>
+<h1 class="page-title">금융사기예방교육</h1>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="35%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
               </div>
-          </div>
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Sale badge-->
-                  <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Special Item</h5>
-                          <!-- Product reviews-->
-                          <div class="d-flex justify-content-center small text-warning mb-2">
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                          </div>
-                          <!-- Product price-->
-                          <span class="text-muted text-decoration-line-through">$20.00</span>
-                          $18.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                  </div>
-              </div>
-          </div>
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Sale badge-->
-                  <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Sale Item</h5>
-                          <!-- Product price-->
-                          <span class="text-muted text-decoration-line-through">$50.00</span>
-                          $25.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                  </div>
-              </div>
-          </div>
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Popular Item</h5>
-                          <!-- Product reviews-->
-                          <div class="d-flex justify-content-center small text-warning mb-2">
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                          </div>
-                          <!-- Product price-->
-                          $40.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                  </div>
-              </div>
-          </div>
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Sale badge-->
-                  <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Sale Item</h5>
-                          <!-- Product price-->
-                          <span class="text-muted text-decoration-line-through">$50.00</span>
-                          $25.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                  </div>
-              </div>
-          </div>
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Fancy Product</h5>
-                          <!-- Product price-->
-                          $120.00 - $280.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                  </div>
-              </div>
-          </div>
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Sale badge-->
-                  <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Special Item</h5>
-                          <!-- Product reviews-->
-                          <div class="d-flex justify-content-center small text-warning mb-2">
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                          </div>
-                          <!-- Product price-->
-                          <span class="text-muted text-decoration-line-through">$20.00</span>
-                          $18.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                  </div>
-              </div>
-          </div>
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Popular Item</h5>
-                          <!-- Product reviews-->
-                          <div class="d-flex justify-content-center small text-warning mb-2">
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                              <div class="bi-star-fill"></div>
-                          </div>
-                          <!-- Product price-->
-                          $40.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                    </div>
-                </div>
+              <small class="text-muted">9 mins</small>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="35%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="35%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="35%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="35%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="35%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+          <div class="card-body">
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </div>
+</div>
 
 <%@ include file="footer.jsp" %>
 </body>

@@ -17,7 +17,7 @@ public class TblComment {
     private Timestamp cmtDate;
 
     // 댓글 작성자 
-    private String memId;
+    private String mem_id;
 
     public int getCmtIdx() {
         return cmtIdx;
@@ -51,12 +51,12 @@ public class TblComment {
         this.cmtDate = cmtDate;
     }
 
-    public String getMemId() {
-        return memId;
+    public String getmem_id() {
+        return mem_id;
     }
 
-    public void setMemId(String memId) {
-        this.memId = memId;
+    public void setmem_id(String mem_id) {
+        this.mem_id = mem_id;
     }
 
     // TblComment 모델 복사
@@ -66,6 +66,6 @@ public class TblComment {
         this.commIdx = param.getCommIdx();
         this.cmtContent = param.getCmtContent();
         this.cmtDate = param.getCmtDate();
-        this.memId = param.getMemId();
+        this.mem_id = param.getmem_id();
     }
 }

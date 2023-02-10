@@ -5,23 +5,31 @@
 
 <mapper namespace="kr.board.mapper.MemberMapper">
 
-  <!--회원가입한 회원정보 받아오기-->
-   <insert id="memberJoin" parameterType="kr.board.entity.TblMember">
-      insert into member(memid,memPw,memName) 
- 	  values(#{memId}, #{memPw}, #{memName})
+    
+  <!-- 회원가입 회원정보 받아오기 -->
+  <insert id="memberJoin" parameterType="kr.board.entity.TblMember">
+	insert into tbl_member(mem_id,memPw,memName,memPhone) 
+ 	  values(#{mem_id}, #{memPw}, #{memName}, #{memPhone})
    </insert>
-   
-  <!-- 회원정보 가져오기 -->
-   <select id="memberLogin" parameterType="kr.board.entity.TblMember"
-     resultType="kr.board.entity.TblMember">
-     select * from member where memId=#{memId} and memPw=#{memPw} 
+
+   <!-- 회원정보 아이디 중복확인 -->
+   <select id="id_check" parameterType="String"
+     resultType="int">
+     select count(mem_id) from tbl_member where mem_id = #{mem_id}; 
    </select>
    
-   <!-- 회원정보 업뎃 -->
+  <!-- 로그인. 회원정보 가져오기 -->
+   <select id="memberLogin" parameterType="kr.board.entity.TblMember"
+     resultType="kr.board.entity.TblMember">
+     select * from tbl_member where mem_id=#{mem_id} and memPw=#{memPw}
+   </select>
+   
+   <!-- 회원정보 수정 업뎃 -->
    <update id="memUpdate" parameterType="kr.board.entity.TblMember">
-      <!-- update member set memPw = #{memPw}, memName = #{memName}, memPhone = #{memPhone} -->
-      update member set memPw = #{memPw}, memName = #{memName}
-      where memId = #{memId}
+	update tbl_member set memPw = #{memPw}, memName = #{memName}
+      where mem_id = #{mem_id}
    </update>
-    
+
+   
+
 </mapper>    

@@ -20,8 +20,11 @@ public class TblCommunity {
     // 글 작성일자 
     private Timestamp commDate;  //indate
 
+    // 회원  아이디 
+    private String mem_id; // id
+    
     // 글 작성자 
-    private String memId; //writer
+    private String commWriter; //writer
 
     // 글 조회수 
     private Integer commViews;  //count
@@ -69,14 +72,22 @@ public class TblCommunity {
         this.commDate = commDate;
     }
 
-    public String getMemId() {
-        return memId;
+    public String getMem_id() {
+        return mem_id;
     }
 
-    public void setMemId(String memId) {
-        this.memId = memId;
+    public void setMem_id(String mem_id) {
+        this.mem_id = mem_id;
     }
 
+    public String getCommWriter() {
+    	return commWriter;
+    }
+    
+    public void setCommWriter(String commWriter) {
+    	this.commWriter = commWriter;
+    }
+    
     public Integer getCommViews() {
         return commViews;
     }
@@ -101,8 +112,10 @@ public class TblCommunity {
         this.commContent = param.getCommContent();
         this.commFile = param.getCommFile();
         this.commDate = param.getCommDate();
-        this.memId = param.getMemId();
+        this.mem_id = param.getMem_id();
+        this.commWriter = param.getCommWriter();
         this.commViews = param.getCommViews();
         this.commShares = param.getCommShares();
     }
+
 }

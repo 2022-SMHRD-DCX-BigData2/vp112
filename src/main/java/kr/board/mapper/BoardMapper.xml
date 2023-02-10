@@ -5,48 +5,13 @@
   
 <mapper namespace="kr.board.mapper.BoardMapper">
 
-    
-    
-    
-  <select id="ViboardList" resultType="kr.board.entity.Board"> 
-      select * from tbl_community
-  </select>
-  
-  <insert id="ViboardInsert" parameterType="kr.board.entity.Board">
-    insert into tbl_community(title, content, writer, memId)
- 	values (#{title},#{content},#{writer},#{memId})
-  </insert>
-  
-  <select id="ViboardContent" parameterType="int" 
-      resultType="kr.board.entity.Board"> 
-      select * from tbl_community where idx=#{idx}
-  </select>
-  
-  <update id="ViboardUpdate" parameterType="kr.board.entity.Board">
-      update tbl_community set title=#{title}, content=#{content}
-      where idx=#{idx}
-  </update>
-
-  <delete id="ViboardDelete" parameterType="int">     
-      delete from tbl_community where idx=#{idx}
-  </delete>
-
-  <update id="ViboardContentUpdate" parameterType="kr.board.entity.Board">
-      update tbl_community set content=#{content} where idx=#{idx}
-  </update>
-
-    
-
-
-    
-  
-  <select id="boardList2" resultType="kr.board.entity.Board"> 
+ <select id="boardList2" resultType="kr.board.entity.Board"> 
       select * from board
   </select>
   
   <insert id="boardInsert2" parameterType="kr.board.entity.Board">
-    insert into board(title, content, writer, memId)
- 	values (#{title},#{content},#{writer},#{memId})
+    insert into board(title, content, writer, mem_id)
+ 	values (#{title},#{content},#{writer},#{mem_id})
   </insert>
   
   <select id="boardContent2" parameterType="int" 
@@ -69,18 +34,51 @@
   
   
     
-    
+   <!-- 커뮤니티 2  ####################-->  
+  <select id="CmboardList" resultType="kr.board.entity.TblCommunity"> 
+      select * from tbl_community
+  </select>
+  
+  <insert id="CmboardInsert" parameterType="kr.board.entity.TblCommunity">
+    insert into tbl_community(commTitle, commContent, commWriter, mem_id)
+ 	values (#{commTitle},#{commContent},#{commWriter},#{mem_id})
+  </insert>
+  
+  <select id="CmboardContent" parameterType="int" 
+      resultType="kr.board.entity.TblCommunity"> 
+      select * from tbl_community where commIdx=#{commIdx}
+  </select>
+  
+  <update id="CmboardUpdate" parameterType="kr.board.entity.TblCommunity">
+      update tbl_community set commTitle=#{commTitle}, commContent=#{commContent}
+      where mem_id=#{mem_id}
+  </update>
+
+  <delete id="CmboardDelete" parameterType="int">     
+      delete from tbl_community where commIdx=#{commIdx}
+  </delete>
+
+  <update id="CmboardContentUpdate" parameterType="kr.board.entity.TblCommunity">
+      update tbl_community set commContent=#{commContent} 
+      where commIdx=#{commIdx}
+  </update>
+  
+  <update id="CmupdateCount" parameterType="kr.board.entity.TblCommunity">
+   	  update tbl_community set commViews=commViews+1 
+   	  where commIdx=#{commIdx}
+  </update>
+  	
   
   
   
-    
-  <select id="boardList" resultType="kr.board.entity.Board"> 
+  <!-- 커뮤니티 1  -->  
+<!--   <select id="boardList" resultType="kr.board.entity.Board"> 
       select * from vp112
   </select>
   
   <insert id="boardInsert" parameterType="kr.board.entity.Board">
-    insert into vp112(title, content, writer, memId)
- 	values (#{title},#{content},#{writer},#{memId})
+    insert into vp112(title, content, writer, mem_id)
+ 	values (#{title},#{content},#{writer},#{mem_id})
   </insert>
   
   <select id="boardContent" parameterType="int" 
@@ -98,7 +96,13 @@
   </delete>
 
   <update id="boardContentUpdate" parameterType="kr.board.entity.Board">
-      update vp112 set content=#{content} where idx=#{idx}
+      update vp112 set content=#{content} 
+      where idx=#{idx}
   </update>
+  
+  <update id="updateCount" parameterType="kr.board.entity.Board">
+       update vp112 set count=count+1 
+       where idx=#{idx}
+  </update> -->
 
 </mapper>

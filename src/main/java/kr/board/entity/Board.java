@@ -7,11 +7,11 @@ public class Board {
 	//게시글 번호, 제목, 내용, 작성자, 작성일, 조회수를 가지는 게시판 만들기
 	private int idx;
 	private String title;
-	private String content;
+	private String content; // 내용
 	private String writer; // 작성자
 	private String indate; //작성일
 	private int count; //조회수
-	private String memId; 
+	private String mem_id; 
 	
 	
 	public int getIdx() {
@@ -50,11 +50,11 @@ public class Board {
 	public void setCount(int count) {
 		this.count = count;
 	}
-	public String getMemId() {
-		return memId;
+	public String getMem_id() {
+		return mem_id;
 	}
-	public void setMemId(String memId) {
-		this.memId = memId;
+	public void setMem_id(String mem_id) {
+		this.mem_id = mem_id;
 	}
 
 }

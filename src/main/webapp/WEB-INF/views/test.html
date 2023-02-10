@@ -6,5 +6,47 @@
 </head>
 <body>
 
+
+<div class="container">
+		<h2>회원 등록 ${login_result}</h2>
+		<h5 style="color: red; display: none;">중복된 아이디가 존재합니다.</h5>
+
+		<c:set var="data" value="${loginResult}" />
+		<c:choose>
+			<c:when test="${data eq '1'}">
+				<!-- <h2>회원가입 성공</h2> -->
+			</c:when>
+			<c:when test="${data eq '0'}">
+				<!-- <h2>회원가입 실패</h2> -->
+			</c:when>
+			<c:otherwise>
+				<h2></h2>
+			</c:otherwise>
+		</c:choose>
+
+
+		<form action="post_user_add" method="post">
+
+			<div class="input-group mb-3">
+				<span class="input-group-text"><i class="bi bi-person-plus-fill" style="line-height: 0px"></i></span>
+				<input name="input_id" id="input_id" type="text" class="form-control" placeholder="Username" autocomplete="username">
+				<button class="btn btn-success" type="button"  onclick="id_check()">중복확인</button>
+			</div>
+
+
+			<div class="input-group mb-3">
+
+				<span class="input-group-text"><i class="bi bi-lock-fill" style="line-height: 0px"></i></span>				
+				<input name="input_pw" id="input_pw" type="password" class="form-control" placeholder="Password" autocomplete="current-password">
+			</div>
+			<button type="submit" class="btn btn-primary" style="width: 100%;">등록</button>
+		</form>
+	</div>
+
+
+
+
+
+
 </body>
 </html>

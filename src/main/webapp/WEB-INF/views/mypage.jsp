@@ -26,39 +26,38 @@
 	}  
 	
 	function Logout(){
- 		location.href="${cpath}/Logout.do";
- 	}  	
+			location.href="${cpath}/Logout.do";
+		}  	
 	
-    //회원수정하기  함수
-    function Update(){
- 	 var memId = $('#memId').val();
- 	 var memPw = $('#memPw').val();
- 	 var memName = $('#memName').val();
- 	 /* var memName = $('#memPhone').val(); */
- 	
- 	 
- 	 let fData = $("#mem_Update").serialize();
- 	 console.log(fData);
- 	 
- 	 $.ajax({
- 		     anyne : true,
- 	         url : "${cpath}/memUpdate",
- 	         type : "post",
- 	         contentType : "application/json;charset=utf-8",
- 	         data :JSON.stringify({
- 	        	 "memId" : memId,
- 	        	 "memPw" : memPw,
- 	        	 "memName" : memName,
- 	        	 /* "memPhone" : memPhone */
- 	         }),
- 	         success : function(){
- 	        	 console.log("ajax실행");
- 	        	 location.href='main.do'
- 	         },
- 	         error : function(){
- 	        	 alert("수정하기 실패");
- 	         }
- 	      });
+	//회원수정하기  함수
+	function Update(){
+		 var mem_id = $('#mem_id').val();
+		 var memPw = $('#memPw').val();
+		 var memName = $('#memName').val();
+		 /* var memName = $('#memPhone').val(); */
+		 
+		 let fData = $("#mem_Update").serialize();
+		 console.log(fData);
+		 
+		 $.ajax({
+			     anyne : true,
+		         url : "${cpath}/memUpdate",
+		         type : "post",
+		         contentType : "application/json;charset=utf-8",
+		         data :JSON.stringify({
+		        	 "mem_id" : mem_id,
+		        	 "memPw" : memPw,
+		        	 "memName" : memName,
+		        	 /* "memPhone" : memPhone */ 
+		         }),
+		         success : function(){
+		        	 console.log("ajax실행");
+		        	 location.href='main.do'
+		         },
+		         error : function(){
+		        	 alert("수정하기 실패");
+		         }
+		      });
 	    }
 </script>
 
@@ -81,8 +80,8 @@
 			<form class="form-inline" action="${cpath}/memUpdate" method="post" id="mem_Update" name="mem_Update">
 				<div class="form-group">
 				
-					<label for="memId">아이디 :</label> 
-					<input type="text" class="form-control" id="memId" name="memId" value="${loginMember.memId}" readonly>
+					<label for="mem_id">아이디 :</label> 
+					<input type="text" class="form-control" id="mem_id" name="mem_id" value="${loginMember.mem_id}" readonly>
 				</div><br>
 				
 				<div class="form-group">
@@ -92,7 +91,7 @@
 				
 				<div class="form-group">
 					<label for="memPw">새 비밀번호:</label> 
-					<input type="password" class="form-control" id="memPw" name="memPw">
+					<input for="memPw" type="text" class="form-control" id="memPw" name="memPw" value="${loginMember.memPw}">
 				</div><br>
 				
 				<div class="form-group">

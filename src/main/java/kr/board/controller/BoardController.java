@@ -23,13 +23,12 @@ public class BoardController {
 		HttpSession session = request.getSession();
 		if(session.getAttribute("loginMember") != null) {
 			TblMember loginMember = (TblMember) session.getAttribute("loginMember");
-			System.out.println("id : " + loginMember.getMemId());
+			System.out.println("id : " + loginMember.getMem_id());
 		}
 		return "main";
 	}
+	
 
-	
-	
 	//서브메뉴 요청
 	@RequestMapping("/sub.do")
 	public String sub(){
@@ -53,31 +52,31 @@ public class BoardController {
 	}
 	
 	
-	//금융예방교육 메뉴 요청
+	
+	//OX퀴즈 메뉴 요청
+	@RequestMapping("/OX.do")
+	public String OX(){
+		return "OX";
+	}
+	
+	//금융예방교육 이미지 게시판 요청
 	@RequestMapping("/edu.do")
 	public String edu(){
 		return "edu";
 	}
 	
-	
-	
-	//금융예방교육 게시판 메뉴 요청
-	@RequestMapping("/ViBoard.do")
-	public String ViBoard(){
-		return "ViBoard";
-	}
+	// TDLCommunity 커뮤니티 게시판
+	@RequestMapping("/TDLCommunity.do")
+	public String TDLCommunity(){
+		return "TDLCommunity";
+	}	
 	
 	//금융커뮤니티 게시판 메뉴 요청
-	@RequestMapping("/CmBoard.do")
-	public String CmBoard(){
-		return "CmBoard";
-	}
+//	@RequestMapping("/CmBoard.do")
+//	public String CmBoard(){
+//		return "CmBoard";
+//	}
 	
-	//게시판 테스트용~~
-	@RequestMapping("/ViBoardTest.do")
-	public String ViBoardTest(){
-		return "ViBoardTest";
-	}	
 	
 	
 }

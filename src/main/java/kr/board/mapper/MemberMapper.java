@@ -1,8 +1,8 @@
 package kr.board.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
-
 import kr.board.entity.TblMember;
+
 
 @Mapper
 public interface MemberMapper {
@@ -14,10 +14,13 @@ public interface MemberMapper {
 	// 회원가입
 	public void memberJoin(TblMember Membervo);
 
+	// 회원정보 아이디 중복확인
+	public int id_check(String mvo) throws Exception;
+	
 	// 회원정보
 	public TblMember memberLogin(TblMember mvo);
 	
 	// 회원정보 수정
 	public void memUpdate(TblMember vo);
-	
+
 }
