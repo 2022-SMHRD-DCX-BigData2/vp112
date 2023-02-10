@@ -119,6 +119,7 @@
  				<button type="button" class="btn btn-default" onclick="Update()">수정하기</button>
 				<button type="button" class="btn btn-default" onclick="main()">home</button>	
 			</form>
+			<div> * 수정한 회원정보는 로그아웃 후 재로그인시 적용됩니다.</div>
   </div>
  </div>
 </div>

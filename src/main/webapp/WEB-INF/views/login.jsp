@@ -12,16 +12,16 @@
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
   <link rel="stylesheet" href="${cpath}/resources/css/common.css">
   <link rel="stylesheet" href="${cpath}/resources/css/home.css">
-<<<<<<< HEAD
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
 		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-=======
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
+
   <script type="module" src="${cpath}/resources/js/share.js"></script>
   <script type="module" src="${cpath}/resources/js/questions.js"></script>
   
-<<<<<<< HEAD
+
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
   		  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
@@ -29,11 +29,11 @@
   		  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   		   
-=======
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
    
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
+
    <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
       
@@ -56,11 +56,7 @@
 		  <br><br>
 		  <div class="form-group">
 		    <div class="col">
-<<<<<<< HEAD
 		    <input class="form-control form-control-lg" id="mem_id" name="mem_id" type="text" placeholder="아이디를 입력해주세요." aria-label=".form-control-lg example" style="padding:20px;" required>
-=======
-		      <input class="form-control form-control-lg" id="memId" name="memId" type="text" placeholder="아이디를 입력해주세요." aria-label=".form-control-lg example" style="padding:20px;" required>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
 		    </div>
 		  </div>
 		  <br>
@@ -71,18 +67,12 @@
 		  </div>
 		  <br><br>
 		  <div class="form-group">
-<<<<<<< HEAD
-   		      <div class="col" style="display: flex; align-items: center; justify-content: center	;">
-		      <button type="submit" class="Qbtn Qbtn-btn2 Qbtn-small">로그인</button>
-		      <button type="button" class="Qbtn Qbtn-btn2 Qbtn-small">ID 찾기</button>
-		      <button type="button" class="Qbtn Qbtn-btn2 Qbtn-small">PW 찾기</button>
-=======
 		      <div class="col" style="display: flex; align-items: center; justify-content: center	;">
 			      <button type="submit" class="Qbtn Qbtn-btn2 Qbtn-small">로그인</button>
 			      <button type="button" class="Qbtn Qbtn-btn2 Qbtn-small">ID 찾기</button>
 			      <button type="button" class="Qbtn Qbtn-btn2 Qbtn-small">PW 찾기</button>
 			  </div>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
+
 		  </div>
 	   </div> 
 		  <br><br>

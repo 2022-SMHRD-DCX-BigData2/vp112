@@ -14,31 +14,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
   <link rel="stylesheet" href="${cpath}/resources/css/common.css">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
   		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
   		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-=======
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
-  
+
   <title>보이스피싱 모의체험!</title>
   
   <script type="text/javascript">
   	function login(){
   		location.href="${cpath}/login.do";
-  	}http://localhost:8084/smhrd/main.do
-<<<<<<< HEAD
- 	
-=======
-  	
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
+  	} /* http://localhost:8084/smhrd/main.do */
+
   	function register(){
   		location.href="${cpath}/register.do";
   	}
@@ -47,16 +40,16 @@
   	  return new bootstrap.Collapse(collapseEl)
   	})
   	
-<<<<<<< HEAD
+
 	function Logout(){
  		location.href="${cpath}/Logout.do";
  	}  	
-=======
+
   	var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
   	var collapseList = collapseElementList.map(function (collapseEl) {
   	  return new bootstrap.Collapse(collapseEl)
   	})
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
+
   </script>
 </head>
 <body>
@@ -84,7 +77,6 @@
              <a class="nav-link" href="${cpath}/sub.do"> 피해예방수칙</a>
            </li>
            <li class="nav-item">
-<<<<<<< HEAD
              <a class="nav-link" href="${cpath}/OX.do"> OX퀴즈</a>
            </li>
            <li class="nav-item">
@@ -92,12 +84,6 @@
            </li>
            <li class="nav-item">
              <a class="nav-link" href="${cpath}/TDLCommunity.do"> 금융커뮤니티</a>
-=======
-             <a class="nav-link" href="${cpath}/edu.do"> 금융사기예방교육</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="${cpath}/CmBoard.do"> 금융커뮤니티</a>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
            </li>
          </ul>
          <ul class="navbar-nav justify-content-end flex-grow-1 pe-1">
@@ -124,10 +110,5 @@
      </div>
    </div>
 </nav>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
 </body>
 </html>
