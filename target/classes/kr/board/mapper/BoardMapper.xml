@@ -36,7 +36,7 @@
     
    <!-- 커뮤니티   ####################-->  
   <select id="CmboardList" resultType="kr.board.entity.TblCommunity"> 
-	SELECT commIdx, commTitle, commContent,commWriter, date_format(commDate,"%Y/%m/%d") AS commDate, commViews
+	SELECT commIdx, commTitle, commContent, commWriter, date_format(commDate,"%Y/%m/%d") AS commDate, commViews
 	FROM tbl_community;
   </select>
   
