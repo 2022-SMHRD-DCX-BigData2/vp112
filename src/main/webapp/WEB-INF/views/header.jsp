@@ -20,7 +20,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
   		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 
   <title>보이스피싱 모의체험!</title>
   
@@ -53,7 +52,7 @@
 <!-- 메뉴 -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary" aria-label="First navbar example">
    <div class="container-fluid align-items-baseline">
-     <a class="navbar-brand" href="${cpath}/main.do">VP112</a>
+     <a class="navbar-brand" href="${cpath}/main.do" style="font-weight: 900;">VP112</a>
      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
        <span class="navbar-toggler-icon"></span>
      </button>
@@ -68,7 +67,7 @@
              <a class="nav-link" href="${cpath}/questionMain.do"><i class="bi bi-person-add"></i> VP모의체험</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="${cpath}/#"> VP확률검사</a>
+             <a class="nav-link" href="${cpath}/VPcheck.do"> VP확률검사</a>
            </li>
            <li class="nav-item">
              <a class="nav-link" href="${cpath}/sub.do"> 피해예방수칙</a>

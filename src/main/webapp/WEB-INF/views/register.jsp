@@ -111,10 +111,10 @@
 	<form class="form-horizontal" action="${cpath}/join.do" method="post">
 		<br>
 		<div class="form-group">
-			<div class="col" style="dispaly: flex;">
+			<div class="col" style="display: flex; flex-direction: row; align-items: center;">
 			  <input class="form-control form-control-lg" id="mem_id" name="mem_id" type="text" placeholder="아이디를 입력해주세요." aria-label=".form-control-lg example" style="padding:20px;" required>
 		      <font id="id_check" size="2"></font>
-			  <button class="btn btn-success" type="button" onclick="id_check()">중복확인</button>
+			  <button class="Qbtn Qbtn-btn2 Qbtn-small" type="button" onclick="id_check()" style="margin-bottom: 0;">중복확인</button>
 			</div>
 		</div>
 		<br>

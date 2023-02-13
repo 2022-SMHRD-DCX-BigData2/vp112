@@ -9,10 +9,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+  		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="${cpath}/resources/css/common.css">
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+  		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
   <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
     
@@ -66,65 +71,62 @@
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
 
-	<h2>마이페이지 입니다</h2>
+	<h1 class="page-title">마이페이지</h1>
 
 
-<div class="container">
- <div class="panel panel-default">
-   <div class="panel-heading">
-   
-   		<div class="form-group">
-			<span>${loginMember.memName}님 환영합니다~~~~</span><br>
+<div class="container" style="width: 65%; border-radius: 20px; background-color: whitesmoke;">
+ <main class="myPage">
+	<br>
+ 	<div class="row g-1" style="display: flex; flex-direction: column; align-items: center;">
+		<div class="col-md-7 col-lg-8" style="text-align: center;">
+			<h4>${loginMember.memName}님 환영합니다!</h4>
 		</div>
-		
-			<form class="form-inline" action="${cpath}/memUpdate" method="post" id="mem_Update" name="mem_Update">
-				<div class="form-group">
-				
-					<label for="mem_id">아이디 :</label> 
-					<input type="text" class="form-control" id="mem_id" name="mem_id" value="${loginMember.mem_id}" readonly>
-				</div><br>
-				
-				<div class="form-group">
-					<label for="memPw">비밀번호:</label> 
-					<input type="password" class="form-control" value="${loginMember.memPw}" readonly>
-				</div><br>
-				
-				<div class="form-group">
-					<label for="memPw">새 비밀번호:</label> 
-					<input for="memPw" type="text" class="form-control" id="memPw" name="memPw" value="${loginMember.memPw}">
-				</div><br>
-				
-				<div class="form-group">
-					<label for="memName">이름:</label> 
-					<input type="text" class="form-control" id="memName" name="memName" value="${loginMember.memName}">
-				</div><br>
-
-				<div class="form-group">
-					<label for="memPhone">휴대폰 :</label> 
-					<input type="text" class="form-control" id="memPhone" name="memPhone" value="${loginMember.memPhone}">
-				</div><br>				
-			
-				<div class="form-group">
-					<label for="memJoindate">회원 가입일자 :</label> 
-					<input type="text" class="form-control" id="memJoindate" name="memJoindate" value="${loginMember.memJoindate}" readonly>
-				</div><br>
-
-				<div class="form-group">
-				      <!-- 회원 유형 일반회원:'M',  관리자:'A' -->
-					<label for="memType">회원 유형 :</label> 
-					<input type="text" class="form-control" id="memType" name="memType" value="${loginMember.memType}" readonly> <!-- readonly="readonly" -->
-				</div><br>
-				
- 				<button type="button" class="btn btn-success" onclick="Logout()">로그아웃</button>
- 				<button type="button" class="btn btn-default" onclick="Update()">수정하기</button>
-				<button type="button" class="btn btn-default" onclick="main()">home</button>	
-			</form>
-			<div> * 수정한 회원정보는 로그아웃 후 재로그인시 적용됩니다.</div>
-  </div>
- </div>
+		<br>
+ 		<div class="col-md-7 col-lg-8">
+ 			<form class="needs-validation" action="${cpath}/memUpdate" method="post" id="mem_Update" name="mem_Update">
+ 				<div class="row-g-3">
+ 					<div class="col-12">
+ 						<label for="mem_id">아이디 :</label> 
+						<input type="text" class="form-control" id="mem_id" name="mem_id" value="${loginMember.mem_id}" readonly>
+ 					</div>
+ 					<div class="col-12">
+ 						<label for="memPw">비밀번호:</label> 
+						<input type="password" class="form-control" value="${loginMember.memPw}" readonly>
+ 					</div>
+ 					<div class="col-12">
+						<label for="memPw">새 비밀번호:</label> 
+						<input for="memPw" type="text" class="form-control" id="memPw" name="memPw" value="${loginMember.memPw}">
+ 					</div>
+ 					<div class="col-12">
+ 						<label for="memName">이름:</label> 
+						<input type="text" class="form-control" id="memName" name="memName" value="${loginMember.memName}">
+ 					</div>
+ 					<div class="col-12">
+ 						<label for="memPhone">휴대폰 :</label> 
+						<input type="text" class="form-control" id="memPhone" name="memPhone" value="${loginMember.memPhone}">
+ 					</div>
+ 					<div class="col-12"> 
+ 						<label for="memJoindate">회원 가입일자 :</label> 
+						<input type="text" class="form-control" id="memJoindate" name="memJoindate" value="${loginMember.memJoindate}" readonly>
+ 					</div>
+ 					<div class="col-12">
+ 						<!-- 회원 유형 일반회원:'M',  관리자:'A' -->
+						<label for="memType">회원 유형 :</label> 
+						<input type="text" class="form-control" id="memType" name="memType" value="${loginMember.memType}" readonly>
+ 					</div>
+ 					<br>
+ 					<div class="col-12">
+		 				<button type="button" class="Cbtn" onclick="Update()" style="width: 5em;">수정하기</button>
+ 					</div>
+ 					<br>
+ 					<div style="text-align:center; color: blue;"> * 수정한 회원정보는 로그아웃 후 재로그인시 적용됩니다.</div>
+ 				</div>
+ 			</form>
+ 		</div>
+ 	</div>
+ </main>
 </div>
-
-
+<%@ include file="footer.jsp" %>
 
 </body>
 </html>

@@ -23,7 +23,10 @@
   <script type="module" src="${cpath}/resources/js/questions.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
-		  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+		
+  <!-- 파비콘 -->
+  <link rel="icon" href="${cpath}/resources/images/favicon.png">
   
   <title>보이스피싱 커뮤니티 메뉴</title>
 
@@ -53,11 +56,11 @@
 		var bList = "<table class='table table-hover'>"; 
 		bList += "<thead>"; 
 		bList += "<tr>";
-		bList += "<th>번호</th>";
-		bList += "<th>제목</th>";
-		bList += "<th>작성자</th>";
-		bList += "<th>작성일</th>";
-		bList += "<th>조회수</th>";
+		bList += "<th style='text-align: center; width: 10em;'>번호</th>";
+		bList += "<th style='text-align: center;'>제목</th>";
+		bList += "<th style='width: 10em;'>작성자</th>";
+// 		bList += "<th>작성일</th>";
+		bList += "<th style='text-align: center; width: 6em;'>조회수</th>";
 		bList += "</tr>";
 		bList += "</thead>";
 		bList += "<tbody class='table-group-divider'>";
@@ -65,13 +68,13 @@
 		
 		$.each(data,(index,obj)=>{ //이문법 원래 오류라고 나오는게 맞다. 오류 아닌데 이클립스가 오류로 인식함
 			bList += "<tr>";
-			bList += "<th>" + obj.idx + "</th>"; 
+			bList += "<th style='text-align: center;'>" + obj.idx + "</th>"; 
 			bList += "<td><a href='javascript:cview(" + obj.commIdx + ")'>" + obj.commTitle + "</a></td>";
 			bList += "<td>" + obj.mem_id + "</td>";
-			bList += "<td>" + obj.commDate + "</td>";
+// 			bList += "<td>" + obj.commDate + "</td>";
 			/* indatas = obj.indate
 			bList += "<td><fmt:formatDate value='${indatas.regdate}' pattern='yyyy.MM.dd'/> </td>"; */
-			bList += "<td id='count" + obj.commIdx + "'>" + obj.commViews + "</td>";
+			bList += "<td id='count" + obj.commIdx + "' style='text-align: center;'>" + obj.commViews + "</td>";
 			bList += "</tr>";
 			
 			//게시글 내용만 보여주는 태그 
@@ -125,7 +128,7 @@
 			}
 		}); //insert ajax끝
 		//3.잘 보내졌으면 글쓰기 버튼 누르고 다면 다시 게시글 목록이 보여질 수 있도록
-			$("#list").css("display","block");
+			$("#list").css("display","flex");
 			$("#wform").css("display","none");
 		//4.글쓰고 나면 다시 열었을때  form태그에  내용이 남은 상태임 	
 			$("#reset").trigger("click") //취소버튼을 강제로 실행 js코드
@@ -193,43 +196,44 @@
 
 <h1 class="page-title">커뮤니티</h1>
 <!--게시판 -->
-<div class="container">
+<div class="container" style="background-color: whitesmoke; border-radius: 20px;">
  <div class="panel panel-default">
-    <div class="panel-body" id="list" style="display: block">Panal content</div>
+    <div class="panel-body" id="list" style="display: flex; justify-content: center;">Panal content</div>
     <div class="panel-body" id="wform"  style="display:none"> 
     
-	    <form class="form-horizontal" id="frm" >
-			  <div class="form-group">
-			    <div class="col-sm-10">
-		         <input type="text" class="form-control" name="commTitle" id="commTitle" placeholder="제목을 입력하세요" maxlength="20">
-			    </div>
+    	<form id="frm">
+    		<br><br>
+    		<div class="row g-2">
+			  <div class="col-sm-7">
+		         <input type="text" class="form-control" name="commTitle" id="commTitle" placeholder="제목을 입력하세요" maxlength="50">
+		      </div>
+			  <div class="col-sm">
+			    <input type="text" readonly="readonly" class="form-control" name="commWriter" id="commWriter" value="${loginMember.memName}" placeholder="작성자">
+			    <input type="hidden"  class="form-control" name="commWriter" id="commWriter">
+		        <input type="hidden"  class="form-control" name="commFile" id="commFile" value="test">
+			    <input type="hidden" name="mem_id" value="${loginMember.memId}">
 			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-10">
+		    </div>
+		    <br>
+			<div class="row g-1">  
+			  <div class="mb-3">
 			      <textarea class="form-control" name="commContent" rows="10" id="commContent" placeholder="내용을 입력하세요"></textarea>
-			    </div>
+		      </div>
+			</div>
+			<br>
+			<div class="row-B justify-content-center">
+			  <div class="col-sm-1">
+				<button type="button" class="Cbtn" onclick="insertFn()" style="margin-right: 10px;">등록</button>
+				<button type="button" class="Cbtn" onclick='location.href = "${cpath}/TDLCommunity.do" ' style="margin-left: 10px;">취소</button>
 			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-10">
-			      <input type="text" readonly="readonly" class="form-control" name="commWriter" id="commWriter" value="${loginMember.memName}">
-			      
-			      <input type="hidden"  class="form-control" name="commWriter" id="commWriter">
-			      <input type="hidden"  class="form-control" name="commFile" id="commFile" value="test">
-			      
-			      <input type="hidden" name="mem_id" value="${loginMember.mem_id}">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="button" class="btn btn-default" onclick="insertFn()">등록</button>
-			      <a class="btn btn-default" role="button" href="${cpath}/CmBoard.do">취소</a>
-			    </div>
-			  </div>
+			</div>
+			<br>
 		</form>
 		
     </div>
  </div>
 </div>
+<br><br><br>
 <!-- footer.jsp 메뉴불러오기 -->
 <%@ include file="footer.jsp" %>
 

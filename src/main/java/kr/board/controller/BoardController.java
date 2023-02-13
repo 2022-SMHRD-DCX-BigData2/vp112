@@ -51,7 +51,11 @@ public class BoardController {
 		return "questionResults";
 	}
 	
-	
+	//VP확률검사 메뉴 요청
+	@RequestMapping("/VPcheck.do")
+	public String VPcheck() {
+		return "VPcheck";
+	}
 	
 	//OX퀴즈 메뉴 요청
 	@RequestMapping("/OX.do")
