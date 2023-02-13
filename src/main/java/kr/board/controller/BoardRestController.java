@@ -65,6 +65,7 @@ public class BoardRestController {
 	@PostMapping("/TDLCommunity")
 	public void CmboardAjaxInsert(TblCommunity vo) {
 		Bmapper.CmboardInsert(vo);
+		System.out.println(vo.getCommDate());
 	}
 	@DeleteMapping("/TDLCommunity/{commIdx}")
 	public void CmboardAjaxDelete(@PathVariable int commIdx) {
@@ -81,6 +82,7 @@ public class BoardRestController {
 		//해당 idx를 가지는 게시글 내용
 		TblCommunity vo = Bmapper.CmboardContent(commIdx);
 		//새로 +1된 조회수를 출력하기 위해서 데이터를 보냄
+		
 		return vo;
 	}
 	

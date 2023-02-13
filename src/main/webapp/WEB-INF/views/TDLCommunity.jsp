@@ -68,13 +68,24 @@
 		
 		$.each(data,(index,obj)=>{ //이문법 원래 오류라고 나오는게 맞다. 오류 아닌데 이클립스가 오류로 인식함
 			bList += "<tr>";
+<<<<<<< HEAD
 			bList += "<th style='text-align: center;'>" + obj.idx + "</th>"; 
+=======
+			bList += "<th>" + obj.commIdx + "</th>"; 
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
 			bList += "<td><a href='javascript:cview(" + obj.commIdx + ")'>" + obj.commTitle + "</a></td>";
+<<<<<<< HEAD
 			bList += "<td>" + obj.mem_id + "</td>";
 // 			bList += "<td>" + obj.commDate + "</td>";
 			/* indatas = obj.indate
 			bList += "<td><fmt:formatDate value='${indatas.regdate}' pattern='yyyy.MM.dd'/> </td>"; */
 			bList += "<td id='count" + obj.commIdx + "' style='text-align: center;'>" + obj.commViews + "</td>";
+=======
+			bList += "<td>" + obj.commWriter + "</td>";
+			bList += "<td>" + obj.commDate + "</td>";
+			console.log(obj.commDate);
+			bList += "<td id='count" + obj.commIdx + "'>" + obj.commViews + "</td>";
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/vp112.git
 			bList += "</tr>";
 			
 			//게시글 내용만 보여주는 태그 

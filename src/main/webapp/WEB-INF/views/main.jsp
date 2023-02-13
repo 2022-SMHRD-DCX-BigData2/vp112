@@ -10,12 +10,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="${cpath}/resources/css/index.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  
-  <link rel="stylesheet" href="${cpath}/resources/css/common.css">	
   <link rel="stylesheet" href="${cpath}/resources/css/home.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/common.css">	
+  <link rel="stylesheet" href="${cpath}/resources/css/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <!-- 파비콘 -->
@@ -57,13 +56,13 @@
 	<br><br>
 	<div class="container" style="width: 33%;">
 		<br>
-		<a href="${cpath}/sub.do" class="Qbtn Qbtn-btn1">VP확률검사</a>
+		<a href="${cpath}/VPcheck.do" class="Qbtn Qbtn-btn1">VP확률검사</a>
 		<br><br>
 	</div>
 	<br><br>
 	<div class="container" style="width: 33%;">
 		<br>
-		<a href="${cpath}/CmBoard.do" class="Qbtn Qbtn-btn1">금융커뮤니티</a>
+		<a href="${cpath}/TDLCommunity.do" class="Qbtn Qbtn-btn1">금융커뮤니티</a>
 		<br><br>
 	</div>
 	<br><br><br><br>
