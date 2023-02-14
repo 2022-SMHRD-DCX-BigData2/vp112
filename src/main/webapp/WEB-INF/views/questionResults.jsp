@@ -21,7 +21,7 @@
   
   <script type="module" src="${cpath}/resources/js/share.js"></script>
   <script type="module" src="${cpath}/resources/js/results.js"></script>
-  
+
   <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png"> 
 

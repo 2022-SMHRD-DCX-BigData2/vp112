@@ -10,10 +10,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+  		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="${cpath}/resources/css/home.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/common.css">
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
+  
+  <script type="module" src="${cpath}/resources/js/share.js"></script>
+  <script type="module" src="${cpath}/resources/js/questions.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+		
+  <!-- 파비콘 -->
+  <link rel="icon" href="${cpath}/resources/images/favicon.png">
   
   <title>보이스피싱 커뮤니티 메뉴</title>
 
@@ -63,8 +73,8 @@
 	        bList += "<td colspan='4'>";
 	        bList += "<textarea class='form-control' row='7' id='nc" + obj.idx + "'>" +  obj.content + "</textarea>";
 	        
-	        //로그인 정보와, 데이터 memId가 같으면 수정 삭제 가능
-	        if("${loginMember.memId}" == obj.memId){
+	        //로그인 정보와, 데이터 mem_id가 같으면 수정 삭제 가능
+	        if("${loginMember.mem_id}" == obj.mem_id){
 		        bList += "<button class='btn btn-sm btn-warning' onclick='goUpdate(" + obj.idx + ")'>수정</button>";
 		        bList += "<button class='btn btn-sm btn-primary' onclick='goDel(" + obj.idx + ")'>삭제</button>";
 	        }else{
@@ -175,43 +185,46 @@
 <%@ include file="header.jsp" %>
 
 <h2 style="text-align: center;">금융커뮤니티 메뉴 페이지 입니다</h2>
+
+    
 <!--게시판 -->
-<div class="container">
+<div class="container" style="background-color: whitesmoke; border-radius: 20px;">
  <div class="panel panel-default">
-    <div class="panel-body" id="list" style="display: block">Panal content</div>
+    <div class="panel-body" id="list" style="display: flex; justify-content: center;">Panal content</div>
     <div class="panel-body" id="wform"  style="display:none"> 
     
-	    <form class="form-horizontal" id="frm" >
-			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="title">제목:</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력하세요">
-			    </div>
+    	<form id="frm">
+    		<br><br>
+    		<div class="row g-2">
+			  <div class="col-sm-7">
+		         <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력하세요" maxlength="50">
+		      </div>
+			  <div class="col-sm">
+			    <input type="text" readonly="readonly" class="form-control" name="writer" id="writer" value="${loginMember.memName}" placeholder="작성자">
+			    <input type="hidden"  class="form-control" name="writer" id="writer">
+			    <input type="hidden" name="mem_id" value="${loginMember.mem_id}">
 			  </div>
-			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="content">내용:</label>
-			    <div class="col-sm-10">
-			      <textarea class="form-control" name="content" rows="10" id="content"></textarea>
-			    </div>
+		    </div>
+		    <br>
+			<div class="row g-1">  
+			  <div class="mb-3">
+			      <textarea class="form-control" name="content" rows="10" id="content" placeholder="내용을 입력하세요"></textarea>
+		      </div>
+			</div>
+			<br>
+			<div class="row-B justify-content-center">
+			  <div class="col-sm-1">
+				<button type="button" class="Cbtn" onclick="insertFn()" style="margin-right: 10px;">등록</button>
+				<button type="button" class="Cbtn" onclick='location.href = "${cpath}/CmBoard.do" ' style="margin-left: 10px;">취소</button>
 			  </div>
-			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="writer">작성자:</label>
-			    <div class="col-sm-10">
-			      <input type="text" readonly="readonly" class="form-control" name="writer" id="writer" value="${loginMember.memName}">
-			      <input type="hidden" name="memId" value="${loginMember.memId}">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="button" class="btn btn-default" onclick="insertFn()">등록</button>
-			      <button type="reset" class="btn btn-default" id="reset">취소</button>
-			    </div>
-			  </div>
+			</div>
+			<br>
 		</form>
 		
     </div>
  </div>
 </div>
+<br><br><br>
 <!-- footer.jsp 메뉴불러오기 -->
 <%@ include file="footer.jsp" %>
 
