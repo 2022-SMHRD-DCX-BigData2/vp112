@@ -79,7 +79,7 @@
              <a class="nav-link" href="${cpath}/edu.do"> 금융사기예방교육</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="${cpath}/TDLCommunity.do"> 금융커뮤니티</a>
+             <a class="nav-link" href="${cpath}/CmBoard.do"> 금융커뮤니티</a>
            </li>
          </ul>
          <ul class="navbar-nav justify-content-end flex-grow-1 pe-1">

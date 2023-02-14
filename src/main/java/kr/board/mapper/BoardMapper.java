@@ -56,21 +56,21 @@ public interface BoardMapper {
 	
 	
 	
-//	public List<Board> boardList();
-//
-//	public void boardInsert(Board vo); 
-//
-//	public Board boardContent(int theIdx);
-//	
-//	//커뮤니티  게시판 업데이트 메소드 
-//	public void boardUpdate(Board vo);
-//	// 삭제
-//	public void boardDelete(int idx);
-//	//내용 업뎃
-//	public void boardContentUpdate(Board vo);
-//	//조회수 업뎃
-//	public void updateCount(int idx);
-//	
+	public List<Board> boardList();
+
+	public void boardInsert(Board vo); 
+
+	public Board boardContent(int theIdx);
+	
+	//커뮤니티  게시판 업데이트 메소드 
+	public void boardUpdate(Board vo);
+	// 삭제
+	public void boardDelete(int idx);
+	//내용 업뎃
+	public void boardContentUpdate(Board vo);
+	//조회수 업뎃
+	public void updateCount(int idx);
+	
 	
 
 }

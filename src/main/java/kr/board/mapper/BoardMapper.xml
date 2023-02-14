@@ -72,9 +72,12 @@
   
   
   
+  	
+	
   <!-- 커뮤니티 1  -->  
-<!--   <select id="boardList" resultType="kr.board.entity.Board"> 
-      select * from vp112
+ <select id="boardList" resultType="kr.board.entity.Board"> 
+      select idx, title, content, writer, date_format(indate,"%Y/%m/%d") AS indate, count
+	  from vp112;
   </select>
   
   <insert id="boardInsert" parameterType="kr.board.entity.Board">
@@ -104,6 +107,6 @@
   <update id="updateCount" parameterType="kr.board.entity.Board">
        update vp112 set count=count+1 
        where idx=#{idx}
-  </update> -->
+  </update>
 
 </mapper>

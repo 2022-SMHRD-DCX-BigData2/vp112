@@ -76,10 +76,10 @@ public class BoardController {
 	}	
 
 	//금융커뮤니티 게시판 메뉴 요청
-//	@RequestMapping("/CmBoard.do")
-//	public String CmBoard(){
-//		return "CmBoard";
-//	}
+	@RequestMapping("/CmBoard.do")
+	public String CmBoard(){
+		return "CmBoard";
+	}
 	
 	
 	
