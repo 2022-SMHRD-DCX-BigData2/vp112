@@ -74,7 +74,7 @@ public class BoardController {
 	public String TDLCommunity(){
 		return "TDLCommunity";
 	}	
-	
+
 	//금융커뮤니티 게시판 메뉴 요청
 //	@RequestMapping("/CmBoard.do")
 //	public String CmBoard(){
