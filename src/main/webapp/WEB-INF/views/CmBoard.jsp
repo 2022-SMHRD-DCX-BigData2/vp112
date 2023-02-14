@@ -63,8 +63,8 @@
 	        bList += "<td colspan='4'>";
 	        bList += "<textarea class='form-control' row='7' id='nc" + obj.idx + "'>" +  obj.content + "</textarea>";
 	        
-	        //로그인 정보와, 데이터 mem_id가 같으면 수정 삭제 가능
-	        if("${loginMember.mem_id}" == obj.mem_id){
+	        //로그인 정보와, 데이터 memId가 같으면 수정 삭제 가능
+	        if("${loginMember.memId}" == obj.memId){
 		        bList += "<button class='btn btn-sm btn-warning' onclick='goUpdate(" + obj.idx + ")'>수정</button>";
 		        bList += "<button class='btn btn-sm btn-primary' onclick='goDel(" + obj.idx + ")'>삭제</button>";
 	        }else{
@@ -198,7 +198,7 @@
 			    <label class="control-label col-sm-2" for="writer">작성자:</label>
 			    <div class="col-sm-10">
 			      <input type="text" readonly="readonly" class="form-control" name="writer" id="writer" value="${loginMember.memName}">
-			      <input type="hidden" name="mem_id" value="${loginMember.mem_id}">
+			      <input type="hidden" name="memId" value="${loginMember.memId}">
 			    </div>
 			  </div>
 			  <div class="form-group">
