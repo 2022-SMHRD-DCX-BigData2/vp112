@@ -49,22 +49,25 @@
 		console.log("데이터 통신 확인!");
 		console.log(data) 
 
-		var bList = "<table class='table table-hover table-bordered'>"; 
+		var bList = "<table class='table table-hover'>"; 
+		bList += "<thead>";
 		bList += "<tr>";
-		bList += "<td>번호</td>";
-		bList += "<td>제목</td>";
-		bList += "<td>작성자</td>";
-		bList += "<td>작성일</td>";
-		bList += "<td>조회수</td>";
-		bList += "<tr>";
+		bList += "<th style='text-align: center; width: 10em;'>번호</th>";
+		bList += "<th style='text-align: center; width: 20em;'>제목</th>";
+		bList += "<th style='text-align: center; width: 10em;'>작성자</th>";
+		bList += "<th style='text-align: center; width: 10em;'>작성일</th>";
+		bList += "<th style='text-align: center; width: 6em;'>조회수</th>";
+		bList += "</tr>";
+		bList += "</thead>";
+		bList += "<tbody class='table-group-divider'>";
 		
 		$.each(data,(index,obj)=>{ //이문법 원래 오류라고 나오는게 맞다. 오류 아닌데 이클립스가 오류로 인식함
 			bList += "<tr>";
-			bList += "<td>" + obj.idx + "</td>"; 
+			bList += "<th style='text-align: center;'>" + obj.idx + "</th>"; 
 			bList += "<td><a href='javascript:cview(" + obj.idx + ")'>" + obj.title + "</a></td>";
-			bList += "<td>" + obj.writer + "</td>";
-			bList += "<td>" + obj.indate + "</td>";
-			bList += "<td id='count" + obj.idx + "'>" + obj.count + "</td>";
+			bList += "<td style='text-align: center;'>" + obj.writer + "</td>";
+			bList += "<td style='text-align: center;'>" + obj.indate + "</td>";
+			bList += "<td id='count" + obj.idx + "' style='text-align: center;'>" + obj.count + "</td>";
 			bList += "</tr>";
 			
 			//게시글 내용만 보여주는 태그 
@@ -83,15 +86,15 @@
         	}
 
 	        bList += "</td>";
-	        bList += "<tr>";
+	        bList += "</tr>";
 		}); //each끝
 		
 		bList += "<tr>";
 		bList += "<td colspan='5'>";
-		bList += "<button class='btn btn-sm btn-info' onclick='goForm()'>글쓰기</button>";
+		bList += "<button class='Cbtn' onclick='goForm()'>글쓰기</button>";
 		bList += "</td>";
 		bList += "</tr>";
-		
+		bList += "</tbody>";
 		bList += "</table>";
 		$("#list").html(bList); 
 	} //callBack함수 끝
@@ -183,13 +186,14 @@
 <body>
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
-
-<h2 style="text-align: center;">금융커뮤니티 메뉴 페이지 입니다</h2>
-
+<br>
+<h1 class="page-title">커뮤니티</h1>
+<br>
     
 <!--게시판 -->
-<div class="container" style="background-color: whitesmoke; border-radius: 20px;">
+<div class="container CmBoard" style="background-color: whitesmoke; border-radius: 20px; width: 75%;">
  <div class="panel panel-default">
+ 	<br>
     <div class="panel-body" id="list" style="display: flex; justify-content: center;">Panal content</div>
     <div class="panel-body" id="wform"  style="display:none"> 
     
@@ -222,6 +226,7 @@
 		</form>
 		
     </div>
+    <br>
  </div>
 </div>
 <br><br><br>

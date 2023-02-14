@@ -64,9 +64,9 @@ public class BoardController {
 	}
 	
 	//금융예방교육 이미지 게시판 요청
-	@RequestMapping("/edu.do")
-	public String edu(){
-		return "edu";
+	@RequestMapping("/ViBoard.do")
+	public String ViBoard(){
+		return "ViBoard";
 	}
 	
 	// TDLCommunity 커뮤니티 게시판

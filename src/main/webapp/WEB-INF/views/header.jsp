@@ -76,7 +76,7 @@
              <a class="nav-link" href="${cpath}/OX.do"> OX퀴즈</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="${cpath}/edu.do"> 금융사기예방교육</a>
+             <a class="nav-link" href="${cpath}/ViBoard.do"> 금융사기예방교육</a>
            </li>
            <li class="nav-item">
              <a class="nav-link" href="${cpath}/CmBoard.do"> 금융커뮤니티</a>

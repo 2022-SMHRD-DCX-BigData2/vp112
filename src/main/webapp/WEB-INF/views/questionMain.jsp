@@ -29,11 +29,11 @@
 
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
-
+<br>
 <h1 class="page-title">
    모의체험하기
 </h1>
-
+<br>
 <div class="sub" style="margin-top: 0;">	 
   <br>
   <h2 class="page-subtitle">

@@ -28,9 +28,9 @@
 
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
-
+<br>
 <h1 class="page-title">VP확률검사</h1>
-
+<br>
 <div class="container justify-content-space-evenly;" 
 	style="background-color: whitesmoke; border-radius: 20px; width: 80%; height: 70%; display: flex; flex-direction: column; justify-content: space-evenly;">
 	<div style="width: 100%; display: flex;">
@@ -56,7 +56,7 @@
     </div>
     <br>
 </div>
-
+<br><br><br><br>
 
 <!-- footer.jsp 메뉴불러오기 -->
 <%@ include file="footer.jsp" %>

@@ -70,9 +70,9 @@
 	
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
-
-	<h1 class="page-title">마이페이지</h1>
-
+<br>
+<h1 class="page-title">마이페이지</h1>
+<br>
 
 <div class="container" style="width: 65%; border-radius: 20px; background-color: whitesmoke;">
  <main class="myPage">

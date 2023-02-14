@@ -47,7 +47,8 @@
 				alert("아이디를 입력하세요");
 				$("#mem_id").focus();
 					return false;
-		   }
+		    }
+			
 			if (memPw == "") {
 				alert("비밀번호를 입력하세요");
 				$("#memPw").focus();
@@ -64,7 +65,6 @@
 	 
 	// 회원가입 아이디 중복 체크
 		function id_check() {
-			 
 			var mem_id = $('#mem_id').val();
 			console.log(mem_id);
 			
@@ -100,9 +100,9 @@
 
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
-
-	<h2 class="page-title" style="text-align:center;">회원가입</h2>
-	<h2></h2>
+<br>
+<h1 class="page-title" style="text-align:center;">회원가입</h1>
+<br>
 
 <!--회원가입 -->
 <div class="container" style="display: flex; justify-content: center; align-items: center;">
@@ -112,9 +112,9 @@
 		<br>
 		<div class="form-group">
 			<div class="col" style="display: flex; flex-direction: row; align-items: center;">
-			  <input class="form-control form-control-lg" id="mem_id" name="mem_id" type="text" placeholder="아이디를 입력해주세요." aria-label=".form-control-lg example" style="padding:20px;" required>
+			  <input class="form-control form-control-lg" id="mem_id" name="mem_id" type="text" placeholder="아이디를 입력해주세요." aria-label=".form-control-lg example" style="padding:20px; margin-right: 5px;" required>
 		      <font id="id_check" size="2"></font>
-			  <button class="Qbtn Qbtn-btn2 Qbtn-small" type="button" onclick="id_check()" style="margin-bottom: 0;">중복확인</button>
+			  <button class="Qbtn Qbtn-btn2 Qbtn-small" type="button" onclick="id_check()" style="margin-bottom: 0; margin-left: 5px;">중복확인</button>
 			</div>
 		</div>
 		<br>
@@ -146,7 +146,7 @@
   </div>
  </div>
 </div>
- 
+<br><br><br><br>
  
 <!-- footer.jsp 메뉴불러오기 -->
 <%@ include file="footer.jsp" %>

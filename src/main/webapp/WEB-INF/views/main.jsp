@@ -31,22 +31,24 @@
 
 <br><br>
 
-<div class="d-flex justify-content-evenly">
-  <div class="d-flex align-items-center" style="width: 400px; height: 300px;">
+<div class="d-flex" style="justify-content: space-evenly;">
+  <div class="d-flex align-items-center" style="width: 500px; height: 300px; flex-direction: column; padding-top: 40px;">
 	<!--차트가 그려질 부분-->
 	<canvas id="myChart"></canvas>
+	<br>
+	<h4 style="text-align: center;">출처 - 국무조정실</h4>
   </div>
-
-  <div class="d-flex align-items-center" style="width: 400px; height: 300px;">
+  <div class="d-flex align-items-center-2" style="width: 300px; height: 300px; flex-direction: column;">
 	<!--차트가 그려질 부분-->
 	<canvas id="myChart2"></canvas>
+	<br>
+	<h4 style="text-align: center;">출처 - 국무조정실</h4>
   </div>
 </div>
 
-<br><br>
 
 <div class="col" style="display:flex; justify-content: center; align-items: center;">
-  <div class="col" style="display: flex; justify-content: center; align-items: center;">
+  <div class="col" style="display: flex; justify-content: center; align-items: center; padding-top: 100px;">
     <br><br><br><br>
 	<div class="container" style="width: 33%;">
 		<br>
@@ -62,7 +64,7 @@
 	<br><br>
 	<div class="container" style="width: 33%;">
 		<br>
-		<a href="${cpath}/TDLCommunity.do" class="Qbtn Qbtn-btn1">금융커뮤니티</a>
+		<a href="${cpath}/CmBoard.do" class="Qbtn Qbtn-btn1">금융커뮤니티</a>
 		<br><br>
 	</div>
 	<br><br><br><br>
@@ -81,14 +83,14 @@
         data: { // 차트에 들어갈 데이터
             labels: [
                 //x 축
-                '1','2','3','4','5','6','7'
+                '2018','2019','2020','2021','2022'
             ],
             datasets: [
                 { //데이터
-                    label: 'test1', //차트 제목
+                    label: '최근 5년간 보이스피싱 발생 현황', //차트 제목
                     fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                     data: [
-                        21,19,25,20,23,26,25 //x축 label에 대응되는 데이터 값
+                        34132,37667,31681,30982,21832 //x축 label에 대응되는 데이터 값
                     ],
                     backgroundColor: [
                         //색상
@@ -96,8 +98,7 @@
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
                         'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        'rgba(153, 102, 255, 0.2)'
                     ],
                     borderColor: [
                         //경계선 색상
@@ -105,10 +106,9 @@
                         'rgba(54, 162, 235, 1)',
                         'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'rgba(153, 102, 255, 1)'
                     ],
-                    borderWidth: 1 //경계선 굵기
+                    borderWidth: 2 //경계선 굵기
                 }
             ]
         },
@@ -128,18 +128,19 @@
         .getElementById('myChart2')
         .getContext('2d');
     var myChart2 = new Chart(context, {
-        type: 'line', // 차트의 형태
+        type: 'pie', // 차트의 형태
         data: { // 차트에 들어갈 데이터
             labels: [
                 //x 축
-                '1','2','3','4','5','6','7'
+                '최근 5년간 연령별 누적 피해 현황',
+                '20대 이하','30대','40대','50대','60대','70대'
             ],
             datasets: [
                 { //데이터
-                    label: 'test2', //차트 제목
+                    label: '최근 5년간 연령별 누적 피해 현황', //차트 제목
                     fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                     data: [
-                        21,19,25,20,23,26,25 //x축 label에 대응되는 데이터 값
+                        0, 25922,22050,37978,45297,20434,4613 //x축 label에 대응되는 데이터 값
                     ],
                     backgroundColor: [
                         //색상
@@ -159,7 +160,7 @@
                         'rgba(153, 102, 255, 1)',
                         'rgba(255, 159, 64, 1)'
                     ],
-                    borderWidth: 1 //경계선 굵기
+                    borderWidth: 2 //경계선 굵기
                 }
             ]
         },

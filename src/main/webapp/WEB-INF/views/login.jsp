@@ -31,10 +31,9 @@
 <body style="display: block;">
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
-
-	<h2 class="page-title" style="text-align:center;">로그인</h2>
-	<h2></h2>
-
+<br>
+<h1 class="page-title" style="text-align:center;">로그인</h1>
+<br>
 <!-- 로그인 -->	 
 <div class="container" style="display: flex; justify-content: center; align-items: center;">
   <div class="container" style="width: 500px; display: flex; justify-content: center; align-items: center; background-color:#f4f4f4; border-radius:20px;">

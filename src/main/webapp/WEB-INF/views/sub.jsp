@@ -28,8 +28,9 @@
 <body style="margin-bottom: 5%;">
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
-
+<br>
 <h1 class="page-title">피해예방수칙</h1><br>
+<br>
 
 	<div class="row row-cols-1 row-cols-md-3 g-4" style="background-color: #46AAFF;">
 	  <div class="col-sub slide-in-bottom">
@@ -85,7 +86,7 @@
 	    </div>
 	  </div>
 	</div>
-			
+<br><br>			
 <!-- footer.jsp 메뉴불러오기 -->
 <%@ include file="footer.jsp" %>
 
