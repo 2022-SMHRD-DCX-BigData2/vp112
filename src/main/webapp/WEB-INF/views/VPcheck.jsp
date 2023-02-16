@@ -34,7 +34,7 @@
 <div class="container justify-content-space-evenly;" 
 	style="background-color: whitesmoke; border-radius: 20px; width: 80%; height: 70%; display: flex; flex-direction: column; justify-content: space-evenly;">
 	<div style="width: 100%; display: flex;">
-	    <input class="form-control form-control-lg" id="formFileLg" type="file">
+	    <input class="form-control form-control-lg" id="formFileLg" type="file" style="margin-right: 10px;">
 	    <button class="Cbtn" type="button" onclick="" style="width: 10em;">확률 검사!</button>
 	    <br><br>
 	</div>
@@ -47,9 +47,15 @@
         	<h2 style="color: red;">112(경찰청), 118(인터넷진흥원), 1332(금융감독원)</h2>
 			<br>
 			<div style="display: flex; flex-direction:row;">
-				<img alt="경찰" src="./resources/images/police.png" style="width: 8em; margin-right: 0.1em;">
-				<img alt="인터넷진흥원" src="./resources/images/internet.png" style="width: 8em;">
-				<img alt="금융감독원" src="./resources/images/financial.png" style="width: 8em; margin-left: 0.1em;">
+				<figure>
+					<img alt="경찰" class="hover12" src="./resources/images/police.png" onclick="window.open('https://www.police.go.kr/index.do','self')">
+				</figure>
+				<figure>
+					<img alt="인터넷진흥원" class="hover12" src="./resources/images/internet.png" onclick="window.open('https://www.kisa.or.kr/#firstPage','self')">
+				</figure>
+				<figure>
+					<img alt="금융감독원" class="hover12" src="./resources/images/financial.png" onclick="window.open('https://www.fss.or.kr/fss/main/main.do','self')">
+				</figure>
 			</div>
 		  </div>
 	    </div>
