@@ -29,7 +29,7 @@ export const questions = [
     question: '지금 상황이 급하기 때문에 우선 통장에 있는 돈은 모두 빼야 됩니다.',
     choices: [
       { text: '현금을 찾는다', value: 'x' },
-      { text: '언제까지 찾아야되는가요?.', value: 'o' }
+      { text: '언제까지 찾아야되는가요?', value: 'o' }
     ]
   },
   {
