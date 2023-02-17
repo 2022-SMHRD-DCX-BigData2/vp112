@@ -1,5 +1,5 @@
 body {
-	background-color: #fce3c2;
+/* 	background-color: #fce3c2!important; */
 }
 
 .number {
@@ -25,21 +25,35 @@ body {
 }
 
 .answer {
+	display: flex;
+	justify-content: center;
 	text-align: center;
 }
 
 .button.o {
-	width: 100px;
-	color: #ffffff;
-	background: #f88379;
-	border: 2px solid #ffffff;
-	padding: 10px;
-	border-radius: 5px;
+	background: #0d6dfb;
 	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	font-weight: 400;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	transition: 0.1s;
+	padding: 15px;
+	font-size: 20px;
+	height: 5em;
+	width: 10em;
+	background-color: #0d6dfb;
+	box-shadow: rgb(87 112 222) 0px 3px 10px;
+	color: #FFFFFF;
 }
 
 .button.o:hover {
-	background: #e63a00;
+	background: #0d6dfb;
 	color: #ffffff;
 	cursor: pointer;
 }
@@ -55,12 +69,23 @@ body {
 }
 
 .button.x {
-	width: 100px;
-	color: #ffffff;
-	background: #f88379;
-	border: 2px solid #ffffff;
-	padding: 10px;
-	border-radius: 5px;
+	background: #e63a00;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	font-weight: 400;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	transition: 0.1s;
+	padding: 15px;
+	font-size: 20px;
+	height: 5em;
+	width: 10em;
+	box-shadow: rgb(230 58 0) 0px 3px 10px;
+	color: #FFFFFF;	
 	margin-left: 10px;
 }
 
@@ -81,13 +106,25 @@ body {
 }
 
 .button.res {
-	width: 150px;
-	color: #ffffff;
-	background: #79aff8;
-	border: 2px solid #ffffff;
-	padding: 10px;
-	border-radius: 5px;
+	background: #0d6dfb;
 	margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	font-weight: 400;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	transition: 0.1s;
+	padding: 15px;
+	font-size: 20px;
+	height: 5em;
+	width: 10em;
+	background-color: #0d6dfb;
+	box-shadow: rgb(87 112 222) 0px 3px 10px;
+	color: #FFFFFF;
 }
 
 .button.res:hover {
@@ -107,12 +144,23 @@ body {
 }
 
 .button.restart {
-	width: 150px;
-	color: #ffffff;
-	background: #f88379;
-	border: 2px solid #ffffff;
-	padding: 10px;
-	border-radius: 5px;
+	background: #e63a00;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	font-weight: 400;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	transition: 0.1s;
+	padding: 15px;
+	font-size: 20px;
+	height: 5em;
+	width: 10em;
+	box-shadow: rgb(230 58 0) 0px 3px 10px;
+	color: #FFFFFF;	
 	margin-left: 10px;
 }
 
@@ -136,4 +184,17 @@ body {
 	width: 320px;
 	margin: 0 auto;
 	margin-top: 20px;
+}
+
+.OXC{
+	background-color: whitesmoke;
+	border-radius: 10px; 
+	width: 80%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.OXbtn{
+	font-size: 4rem;
+	margin-top: 0.5rem;
 }

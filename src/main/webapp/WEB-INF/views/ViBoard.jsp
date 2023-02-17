@@ -10,13 +10,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="${cpath}/resources/css/home.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/common.css">
   <link rel="stylesheet" href="${cpath}/resources/css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   
-  <title>보이스피싱 커뮤니티 메뉴</title>
-
+  <!-- 파비콘 -->	
+  <link rel="icon" href="${cpath}/resources/images/favicon.png">
+  <title>금융사기예방교육</title>
+  
   <script type="text/javascript">
 	$(document).ready(function(){
   		boardList();
@@ -30,7 +34,7 @@
 	  			dataType : "json", 
 	  			success : callBack,
 	  			error : function() {
-	  				alert("error");
+	  				// alert("error");
 				}
   		}) //ajax끝
 	} //boardList함수 끝
@@ -173,80 +177,151 @@
 <body>
 <!-- header 메뉴불러오기 -->
 <%@ include file="header.jsp" %>
+<br>
+<h1 class="page-title">금융사기예방교육</h1>
+<br>
+<div class="row g-3">
+	<div class="col-Vi">
+	
+	  <div class="card" style="border-color: whitesmoke;">
+		<div class="embed-responsive embed-responsive-16by9">
+       	  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gw7qE2fJcUo"></iframe>
+        </div>
+	    <div class="card-body">
+	      <p class="card-text" onclick="window.open('https://www.youtube.com/watch?v=gw7qE2fJcUo','self')" style='cursor:pointer;'>경찰청 - 보이스피싱 예방법</p>
+	      <div class="d-flex justify-content-between align-items-center">
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <div class="card" style="border-color: whitesmoke;">
+		<div class="embed-responsive embed-responsive-16by9">
+       	  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aLuA6YLIHYU"></iframe>
+        </div>
+	    <div class="card-body">
+	      <p class="card-text" onclick="window.open('https://www.youtube.com/watch?v=aLuA6YLIHYU','self')" style='cursor:pointer;'>경찰청 - 보이스피싱 예방법2</p>
+	      <div class="d-flex justify-content-between align-items-center">
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <div class="card" style="border-color: whitesmoke;">
+		<div class="embed-responsive embed-responsive-16by9">
+       	  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qCXYZw3Asuw"></iframe>
+        </div>
+	    <div class="card-body">
+	      <p class="card-text" onclick="window.open('https://www.youtube.com/watch?v=qCXYZw3Asuw','self')" style='cursor:pointer;'>경찰청 - 보이스피싱 예방법3</p>
+	      <div class="d-flex justify-content-between align-items-center">
+	      </div>
+	    </div>
+	  </div>
 
-<h2>금융예방교육 동영상 페이지 입니다</h2>
-
+	</div>
+	
+	<div class="col-Vi">
+	  
+	  <div class="card" style="border-color: whitesmoke;">
+		<div class="embed-responsive embed-responsive-16by9">
+       	  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/19nj1XPYa2U" name="iframe"></iframe>
+        </div>
+	    <div class="card-body">
+	      <p class="card-text" onclick="window.open('https://www.youtube.com/watch?v=19nj1XPYa2U','self')" style='cursor:pointer;'>경찰청 - 보이스피싱 예방법4</p>
+	      <div class="d-flex justify-content-between align-items-center">
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <div class="card" style="border-color: whitesmoke;">
+		<div class="embed-responsive embed-responsive-16by9">
+       	  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CKLoGpbhVi4"></iframe>
+        </div>
+	    <div class="card-body">
+	      <p class="card-text" onclick="window.open('https://www.youtube.com/watch?v=CKLoGpbhVi4','self')" style='cursor:pointer;'>경찰청 - 보이스피싱 예방법5</p>
+	      <div class="d-flex justify-content-between align-items-center">
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <div class="card" style="border-color: whitesmoke;">
+		<div class="embed-responsive embed-responsive-16by9">
+       	  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ODu_GCIuDGc" name="iframe"></iframe>
+        </div>
+	    <div class="card-body">
+	      <p class="card-text" onclick="window.open('https://www.youtube.com/watch?v=ODu_GCIuDGc','self')" style='cursor:pointer;'>EBS - 금융 사기 예방하기</p>
+	      <div class="d-flex justify-content-between align-items-center">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	  <br>
+</div>
 
 
 <!-- 이미지 게시판 썸네일 -->
-<section class="py-5">
-  <div class="container px-4 px-lg-5 mt-5">
-      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-          <div class="col mb-5">
-              <div class="card h-100">
-                  <!-- Product image-->
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
-                  <!-- Product details-->
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <!-- Product name-->
-                          <h5 class="fw-bolder">Fancy Product</h5>
-                          <!-- Product price-->
-                          $40.00 - $80.00
-                      </div>
-                  </div>
-                  <!-- Product actions-->
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                  </div>
-              </div>
-          </div>
-        </div>
-    </div>
-</section>          
+<!-- <section class="py-5"> -->
+<!--   <div class="container px-4 px-lg-5 mt-5"> -->
+<!--       <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"> -->
+<!--           <div class="col mb-5"> -->
+<!--               <div class="card h-100"> -->
+<!-- 	              Product video -->
+<!-- 	              <div class="embed-responsive embed-responsive-16by9"> -->
+<!-- 	              	<iframe class="embed-responsive-item" src="https://www.dgpolice.go.kr/movie/bbs_prcon/bbs_vocpr200207_202205020412116691.mp4"></iframe> -->
+<!-- 	              </div> -->
+<!-- 	              Product details -->
+<!--                   <div class="card-body p-4"> -->
+<!--                       <div class="text-center"> -->
+<!--                           Product name -->
+<!--                           <h5 class="fw-bolder">대구 경찰청 - 보이스피싱 예방법</h5> -->
+<!--                       </div> -->
+<!--                   </div> -->
+<!--               </div> -->
+<!--           </div> -->
+<!--         </div> -->
+<!--     </div> -->
+<!-- </section>           -->
 
 
 
 <!--리스트 게시판 -- 이미지 게시판으로 아래 코드 교체할 예정, 삭제하지 말기-->
-<div class="container">
- <div class="panel panel-default">
-    <div class="panel-body" id="list" style="display: block">Panal content</div>
-    <div class="panel-body" id="wform"  style="display:none"> 
+<!-- <div class="container"> -->
+<!--  <div class="panel panel-default"> -->
+<!--     <div class="panel-body" id="list" style="display: block">Panal content</div> -->
+<!--     <div class="panel-body" id="wform"  style="display:none">  -->
     
-	    <form class="form-horizontal" id="frm" >
-			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="title">제목:</label>
-			    <div class="col-sm-10">
-			      <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력하세요">
-			    </div>
-			  </div>
+<!-- 	    <form class="form-horizontal" id="frm" > -->
+<!-- 			  <div class="form-group"> -->
+<!-- 			    <label class="control-label col-sm-2" for="title">제목:</label> -->
+<!-- 			    <div class="col-sm-10"> -->
+<!-- 			      <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력하세요"> -->
+<!-- 			    </div> -->
+<!-- 			  </div> -->
 			  
-			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="content">내용:</label>
-			    <div class="col-sm-10">
-			      <textarea class="form-control" name="content" rows="10" id="content"></textarea>
-			    </div>
-			  </div>
+<!-- 			  <div class="form-group"> -->
+<!-- 			    <label class="control-label col-sm-2" for="content">내용:</label> -->
+<!-- 			    <div class="col-sm-10"> -->
+<!-- 			      <textarea class="form-control" name="content" rows="10" id="content"></textarea> -->
+<!-- 			    </div> -->
+<!-- 			  </div> -->
 			  
 			  
-			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="writer">작성자:</label>
-			    <div class="col-sm-10">
-			      <input type="text" readonly="readonly" class="form-control" name="writer" id="writer" value="${loginMember.memName}">
-			      <input type="hidden" name="mem_id" value="${loginMember.mem_id}">
-			    </div>
-			  </div>
+<!-- 			  <div class="form-group"> -->
+<!-- 			    <label class="control-label col-sm-2" for="writer">작성자:</label> -->
+<!-- 			    <div class="col-sm-10"> -->
+<%-- 			      <input type="text" readonly="readonly" class="form-control" name="writer" id="writer" value="${loginMember.memName}"> --%>
+<%-- 			      <input type="hidden" name="mem_id" value="${loginMember.mem_id}"> --%>
+<!-- 			    </div> -->
+<!-- 			  </div> -->
 			  
-			  <div class="form-group">
-			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="button" class="btn btn-default" onclick="insertFn()">등록</button>
-			      <button type="reset" class="btn btn-default" id="reset">취소</button>
-			    </div>
-			  </div>
-		</form>
-    </div>
- </div>
-</div>
+<!-- 			  <div class="form-group"> -->
+<!-- 			    <div class="col-sm-offset-2 col-sm-10"> -->
+<!-- 			      <button type="button" class="btn btn-default" onclick="insertFn()">등록</button> -->
+<!-- 			      <button type="reset" class="btn btn-default" id="reset">취소</button> -->
+<!-- 			    </div> -->
+<!-- 			  </div> -->
+<!-- 		</form> -->
+<!--     </div> -->
+<!--  </div> -->
+<!-- </div> -->
 
 
 
