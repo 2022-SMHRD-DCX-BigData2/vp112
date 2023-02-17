@@ -32,7 +32,7 @@
 <br><br>
 
 <div class="d-flex" style="justify-content: space-evenly;">
-  <div class="d-flex align-items-center" style="width: 500px; height: 300px; flex-direction: column; padding-top: 40px;">
+  <div class="d-flex align-items-center" style="width: 400px; height: 300px; flex-direction: column; padding-top: 40px;">
 	<!--차트가 그려질 부분-->
 	<canvas id="myChart"></canvas>
 	<br>
