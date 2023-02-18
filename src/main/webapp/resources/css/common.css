@@ -1,5 +1,45 @@
-/* 공통css */
+/* 애니메이션 효과 */
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;        
+}
 
+.slide-in-bottom2 {
+	-webkit-animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-bottom3 {
+	-webkit-animation: slide-in-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 공통css */
 body {
   font-family: "Pretendard Variable", sans-serif;
   word-break: keep-all;
@@ -15,6 +55,25 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hover12{
+width: 6em!important; 
+margin-right: 0.1em!important; 
+cursor:pointer;
+}
+
+.align-items-center{
+	width: 30%; 
+	height: 300px; 
+	flex-direction: column; 
+	padding-top: 40px;
+}
+
+.align-items-center-2{
+	width: 20%; 
+	height: 300px; 
+	flex-direction: column;
 }
 
 .nav-link:focus, .nav-link:hover{
@@ -236,71 +295,9 @@ img {
 	margin-bottom: 10px;
 }
 
-
-/* 애니메이션 효과 */
-.slide-in-bottom {
-	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;        
-}
-
-.slide-in-bottom2 {
-	-webkit-animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.slide-in-bottom3 {
-	-webkit-animation: slide-in-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bottom 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes slide-in-bottom {
-  0% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-bottom {
-  0% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.hover12{
-	width: 6em!important; 
-	margin-right: 0.1em!important; 
-	cursor:pointer;
-}
-
-.align-items-center{
-	width: 400px; 
-	height: 300px; 
-	flex-direction: column; 
-	padding-top: 40px;
-}
-
-.align-items-center-2{
-	width: 300px; 
-	height: 300px; 
-	flex-direction: column;
-}
-
 /* 미디어쿼리 */
 /* PC (해상도 1024px)*/ 
 @media all and (min-width:1024px) {
-	
 } 
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
