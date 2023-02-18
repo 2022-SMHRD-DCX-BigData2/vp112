@@ -55,9 +55,9 @@
 		  <br><br>
 		  <div class="form-group">
 		      <div class="col" style="display: flex; align-items: center; justify-content: center; flex-direction: row;">
-			      <button type="submit" class="Qbtn Qbtn-btn2 Qbtn-small">로그인</button>
-			      <button type="button" class="Qbtn Qbtn-btn2 Qbtn-small">ID 찾기</button>
-			      <button type="button" class="Qbtn Qbtn-btn2 Qbtn-small">PW 찾기</button>
+			      <button type="submit" class="Qbtn Qbtn-btn2 Qbtn-small Qbtn-Login">로그인</button>
+			      <button type="button" class="Qbtn Qbtn-btn2 Qbtn-small Qbtn-Login">ID 찾기</button>
+			      <button type="button" class="Qbtn Qbtn-btn2 Qbtn-small Qbtn-Login">PW 찾기</button>
 			  </div>
 		  </div>
 		</form>	

@@ -32,13 +32,13 @@
 <br><br>
 
 <div class="d-flex" style="justify-content: space-evenly;">
-  <div class="d-flex align-items-center" style="width: 400px; height: 300px; flex-direction: column; padding-top: 40px;">
+  <div class="d-flex align-items-center">
 	<!--차트가 그려질 부분-->
 	<canvas id="myChart"></canvas>
 	<br>
 	<h4 style="text-align: center;">출처 - 국무조정실</h4>
   </div>
-  <div class="d-flex align-items-center-2" style="width: 300px; height: 300px; flex-direction: column;">
+  <div class="d-flex align-items-center-2">
 	<!--차트가 그려질 부분-->
 	<canvas id="myChart2"></canvas>
 	<br>

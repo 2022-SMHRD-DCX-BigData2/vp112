@@ -77,11 +77,11 @@
   </div>
 
 <!-- 주소 복사 + 얼럿창 나타나는 함수=> share.js파일, share-or-copy클래스 선택 -->
-  <div class="Qbtn Qbtn-btn2 Qbtn-small share-or-copy">
+  <div class="Qbtn Qbtn-btn2 Qbtn-small Qbtn-Rs share-or-copy">
     모의체험 결과 공유하기
   </div>
 
-  <a href="${cpath}/questionMain.do" class="Qbtn Qbtn-btn2 Qbtn-small share-or-copy">
+  <a href="${cpath}/questionMain.do" class="Qbtn Qbtn-btn2 Qbtn-small Qbtn-Rs share-or-copy">
     모의체험 다시하기
   </a>
   

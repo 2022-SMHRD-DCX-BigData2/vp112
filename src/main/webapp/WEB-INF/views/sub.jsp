@@ -32,7 +32,7 @@
 <h1 class="page-title">피해예방수칙</h1><br>
 <br>
 
-	<div class="row row-cols-1 row-cols-md-3 g-4" style="background-color: #46AAFF;">
+	<div class="row row-cols-1 row-cols-md-3 g-4" style="background-color: #46AAFF; width:100%; margin-right: auto; margin-left: auto;">
 	  <div class="col-sub slide-in-bottom">
 	    <div class="card h-100">
 	      <div class="circle">

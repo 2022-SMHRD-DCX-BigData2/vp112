@@ -278,24 +278,26 @@ img {
   }
 }
 
+.hover12{
+	width: 6em!important; 
+	margin-right: 0.1em!important; 
+	cursor:pointer;
+}
 
+.align-items-center{
+	width: 400px; 
+	height: 300px; 
+	flex-direction: column; 
+	padding-top: 40px;
+}
 
-/* 미디어쿼리 : 브라우저 작아지면 어떤 CSS을 추가할지 지정 */
-/* @media (max-width: 640px) { */
-/*   body { */
-/*     padding-top: 50px; */
-/*     margin-left: 20px; */
-/*     margin-right: 20px; */
-/*   } */
-/*   .page-title { */
-/*     font-size: 40px; */
-/*   } */
-/*   .Qbtn { */
-/*     font-size: 34px; */
-/*   } */
-/* } */
+.align-items-center-2{
+	width: 300px; 
+	height: 300px; 
+	flex-direction: column;
+}
 
-
+/* 미디어쿼리 */
 /* PC (해상도 1024px)*/ 
 @media all and (min-width:1024px) {
 	
@@ -379,14 +381,49 @@ img {
   
 }
 
-/* @media (min-width: 881px) { */
-/*   .navbar-toggle { */
-/*     display: none!important; */
-/*   } */
-/* } */
+@media all and (max-width:479px){
+	html{
+		display: flex;
+		justify-contetn: center;
+	}
+	
+	body{
+		width: 100%;
+		height: 100%;
+	}
+	
+	.align-items-center{
+		width: 300px; 
+		height: 300px; 
+		flex-direction: column; 
+		padding-top: 40px;
+	}
 
-.hover12{
-	width: 6em!important; 
-	margin-right: 0.1em!important; 
-	cursor:pointer;
+	.align-items-center-2{
+		width: 300px; 
+		height: 300px; 
+		flex-direction: column;
+	}
+	
+	.character{
+		margin-bottom: 110px;
+	}
+	
+	.Qbtn{
+		font-size: 40px;
+	}
+	
+	.Qbtn-Rs{
+		font-size: 30px;
+	}
+	
+	.Qbtn-Login{
+		font-size: 25px;
+	}
+	
+	.progress{
+		height: 1.8em!important;
+	}
+	
 }
+
