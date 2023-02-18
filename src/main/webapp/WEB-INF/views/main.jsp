@@ -31,7 +31,7 @@
 
 <br><br>
 
-<div class="d-flex" style="justify-content: space-evenly;">
+<div class="d-flex" style="justify-content: space-evenly; margin-bottom: 20px;">
   <div class="d-flex align-items-center">
 	<!--차트가 그려질 부분-->
 	<canvas id="myChart"></canvas>

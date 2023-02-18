@@ -63,19 +63,6 @@ margin-right: 0.1em!important;
 cursor:pointer;
 }
 
-.align-items-center{
-	width: 30%; 
-	height: 300px; 
-	flex-direction: column; 
-	padding-top: 40px;
-}
-
-.align-items-center-2{
-	width: 20%; 
-	height: 300px; 
-	flex-direction: column;
-}
-
 .nav-link:focus, .nav-link:hover{
   color: #faf200!important;
 }
@@ -295,9 +282,33 @@ cursor:pointer;
 	margin-bottom: 10px;
 }
 
+.align-items-center{
+	width: 30em; 
+	height: 300px; 
+	flex-direction: column; 
+	padding-top: 40px;
+}
+
+.align-items-center-2{
+	width: 20em; 
+	height: 300px; 
+	flex-direction: column;
+}
+
 /* 미디어쿼리 */
 /* PC (해상도 1024px)*/ 
 @media all and (min-width:1024px) {
+	.align-items-center{
+	width: 30em; 
+	height: 300px; 
+	flex-direction: column; 
+	}
+	
+	.align-items-center-2{
+	width: 20em; 
+	height: 300px; 
+	flex-direction: column;
+	}
 } 
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
