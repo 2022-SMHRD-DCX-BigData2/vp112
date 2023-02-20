@@ -33,15 +33,19 @@
 <br>
 <div class="container justify-content-space-evenly;" 
 	style="background-color: whitesmoke; border-radius: 20px; width: 80%; height: 70%; display: flex; flex-direction: column; justify-content: space-evenly;">
-	<div style="width: 100%; display: flex;">
-	    <input class="form-control form-control-lg" id="formFileLg" type="file" style="margin-right: 10px;">
-	    <button class="Cbtn" type="button" onclick="" style="width: 10em;">확률 검사!</button>
-	    <br><br>
-	</div>
+	<form action="uploadFormAction" method="post" enctype="multipart/form-data">
+		<div style="width: 100%; display: flex;">
+	    	<input class="form-control form-control-lg" id="formFileLg" name="uploadFile" type="file" style="margin-right: 10px;" multiple />
+	    	<!--  <button class="Cbtn" type="button" style="width: 10em;">확률 검사!</button>-->
+	    	<button class="Cbtn" style="width: 10em;">확률 검사!</button>
+	   	</div>
+	</form>
+	<br><br>
+	
 	<div class="row" style="width: 100%;">
 		<div class="container" style="border-radius: 20px;">
 	      <div class="container" style="display: flex; flex-direction: column; text-align: center;">
-			<h2>해당 통화의 보이스피싱 확률은 00%입니다!</h2>
+			<h2>해당 통화의 보이스피싱 확률은 ${param.result}%입니다!</h2>
 			<br>
 			<h2 style="color: red;">지금 바로 신고하세요!</h2>
         	<h2 style="color: red;">112(경찰청), 118(인터넷진흥원), 1332(금융감독원)</h2>
