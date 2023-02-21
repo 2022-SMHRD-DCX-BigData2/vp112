@@ -33,7 +33,7 @@
 <br>
 <div class="container justify-content-space-evenly;" 
 	style="background-color: whitesmoke; border-radius: 20px; width: 80%; height: 70%; display: flex; flex-direction: column; justify-content: space-evenly;">
-	<form action="http://localhost:9900" method="post" enctype="multipart/form-data">
+	<form action="http://172.30.1.42:9900" method="post" enctype="multipart/form-data">
 		<div style="width: 100%; display: flex;">
 	    	<input class="form-control form-control-lg" id="formFileLg" name="uploadFile" type="file" style="margin-right: 10px;" multiple />
 	    	<!--  <button class="Cbtn" type="button" style="width: 10em;">확률 검사!</button>-->
