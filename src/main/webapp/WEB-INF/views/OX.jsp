@@ -18,7 +18,7 @@
    <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
   
-  <title>ox퀴즈 입니다</title>
+  <title>OX퀴즈</title>
   
 </head>
 <body>

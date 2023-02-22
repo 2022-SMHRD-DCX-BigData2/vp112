@@ -21,7 +21,7 @@
   <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
     
-  <title>보이스피싱!</title>
+  <title>마이페이지</title>
 
 </head>
 

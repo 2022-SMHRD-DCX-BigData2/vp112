@@ -22,7 +22,7 @@
    <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
   
-  <title>보이스피싱 모의체험 페이지(메인)1입니다</title>
+  <title>보이스피싱 모의체험 페이지1(메인)</title>
   
 </head>
 <body style="margin-bottom: 5%;">

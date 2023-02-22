@@ -25,7 +25,7 @@
   <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
   
-  <title>보이스피싱</title>
+  <title>회원가입</title>
   
   <script type="text/javascript">
   //메인 

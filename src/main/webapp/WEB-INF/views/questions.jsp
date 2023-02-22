@@ -23,7 +23,7 @@
   <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
   
-  <title>보이스피싱 모의체험 페이지2(질문)입니다</title>
+  <title>보이스피싱 모의체험 페이지2(질문)</title>
   
   <script type="text/javascript">
 	$(document).ready(function(){

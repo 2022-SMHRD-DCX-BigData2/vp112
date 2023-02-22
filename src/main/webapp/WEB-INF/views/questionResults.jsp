@@ -25,7 +25,7 @@
   <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png"> 
 
-  <title>보이스피싱 모의체험 페이지3(결과)입니다</title>
+  <title>보이스피싱 모의체험 페이지3(결과)</title>
   
   <script type="text/javascript">
 	$(document).ready(function(){

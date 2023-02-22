@@ -19,7 +19,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
-  <title>메인페이지 입니다</title>
+  <title>메인페이지</title>
 
   
 </head>

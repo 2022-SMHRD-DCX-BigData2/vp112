@@ -25,7 +25,7 @@
   <!-- 파비콘 -->
   <link rel="icon" href="${cpath}/resources/images/favicon.png">
   
-  <title>보이스피싱 커뮤니티 메뉴</title>
+  <title>보이스피싱 커뮤니티</title>
 
   <script type="text/javascript">
 	$(document).ready(function(){
