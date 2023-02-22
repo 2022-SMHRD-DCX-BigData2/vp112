@@ -43,27 +43,52 @@
 	<br><br>
 	
 	<div class="row" style="width: 100%;">
-		<div class="container" style="border-radius: 20px;">
+	   <div class="container" style="border-radius: 20px;">
 	      <div class="container" style="display: flex; flex-direction: column; text-align: center;">
-			<h2>해당 통화의 보이스피싱 확률은 ${param.result}%입니다!</h2>
+			<p class="page-title">해당 통화의 보이스피싱 확률은  <i class="animate__tada" style="color: red;">${param.result}%</i> 입니다!</p>
 			<br>
-			<h2 style="color: red;">지금 바로 신고하세요!</h2>
-        	<h2 style="color: red;">112(경찰청), 118(인터넷진흥원), 1332(금융감독원)</h2>
-			<br>
-			<div style="display: flex; flex-direction:row;">
-				<figure>
-					<img alt="경찰" class="hover12" src="./resources/images/police.png" onclick="window.open('https://www.police.go.kr/index.do','self')">
-				</figure>
-				<figure>
-					<img alt="인터넷진흥원" class="hover12" src="./resources/images/internet.png" onclick="window.open('https://www.kisa.or.kr/#firstPage','self')">
-				</figure>
-				<figure>
-					<img alt="금융감독원" class="hover12" src="./resources/images/financial.png" onclick="window.open('https://www.fss.or.kr/fss/main/main.do','self')">
-				</figure>
-			</div>
+			<c:choose>
+				<c:when test="${param.result >= 70}">
+					<h2 class="animate__bounce" style="color: red;">지금 바로 신고하세요!</h2>
+		        	<h2 class="animate__bounce" style="color: red;">112(경찰청), 118(인터넷진흥원), 1332(금융감독원)</h2>
+					<br>
+					<div style="display: flex; flex-direction:row;">
+						<figure>
+							<img alt="경찰" class="hover12" src="./resources/images/police.png" onclick="window.open('https://www.police.go.kr/index.do','self')">
+						</figure>
+						<figure>
+							<img alt="인터넷진흥원" class="hover12" src="./resources/images/internet.png" onclick="window.open('https://www.kisa.or.kr/#firstPage','self')">
+						</figure>
+						<figure>
+							<img alt="금융감독원" class="hover12" src="./resources/images/financial.png" onclick="window.open('https://www.fss.or.kr/fss/main/main.do','self')">
+						</figure>
+					</div>
+					<h2 class="animate__bounce" style="color: blue;">*이미지를 누르시면 해당 사이트로 이동됩니다*</h2>
+				</c:when>
+				<c:when test="${param.result < 70}">
+					<h2 class="animate__bounce" style="color: red;">확률은 낮지만 그래도 의심하는게 좋습니다!</h2>
+		        	<h2 class="animate__bounce" style="color: blue;" onclick="location.href='${cpath}/sub.do'">피해예방수칙을 읽어보시는건 어떨까요?</h2>
+					<br>
+					<div style="display: flex; flex-direction:row;">
+						<figure>
+							<img alt="경찰" class="hover12" src="./resources/images/police.png" onclick="window.open('https://www.police.go.kr/index.do','self')">
+						</figure>
+						<figure>
+							<img alt="인터넷진흥원" class="hover12" src="./resources/images/internet.png" onclick="window.open('https://www.kisa.or.kr/#firstPage','self')">
+						</figure>
+						<figure>
+							<img alt="금융감독원" class="hover12" src="./resources/images/financial.png" onclick="window.open('https://www.fss.or.kr/fss/main/main.do','self')">
+						</figure>
+					</div>
+					<h2 class="animate__bounce" style="color: blue;">*이미지를 누르시면 해당 사이트로 이동됩니다*</h2>
+				</c:when>
+				<c:otherwise>
+					<h2 class="animate__bounce" style="color: blue; cursor:pointer;" onclick="location.href='${cpath}/sub.do'">피해예방수칙을 읽어보세요!</h2>
+				</c:otherwise>
+			</c:choose>
 		  </div>
 	    </div>
-    </div>
+      </div>
     <br>
 </div>
 <br><br><br><br>
