@@ -33,15 +33,20 @@
 <br>
 <div class="container justify-content-space-evenly;" 
 	style="background-color: whitesmoke; border-radius: 20px; width: 80%; height: 70%; display: flex; flex-direction: column; justify-content: space-evenly;">
-	<form action="http://172.30.1.42:9900" method="post" enctype="multipart/form-data">
+	<form action="http://127.0.0.1:9990" method="post" enctype="multipart/form-data">
 		<div style="width: 100%; display: flex;">
 	    	<input class="form-control form-control-lg" id="formFileLg" name="uploadFile" type="file" style="margin-right: 10px;" multiple />
 	    	<!--  <button class="Cbtn" type="button" style="width: 10em;">확률 검사!</button>-->
 	    	<button class="Cbtn" style="width: 10em;">확률 검사!</button>
 	   	</div>
+
 	</form>
-	<br><br>
-	
+   	<div>
+	   	<h2 class="animate__bounce" style="color: blue;">파일선택 후! 확률검사 버튼을 눌러주세요</h2>
+	   	<h2 class="animate__bounce" style="color: blue;">확률검사는 1~2분 정도 소요됩니다.잠시만 기다려주세요</h2>
+   	</div>	
+	<!-- <br><br> -->
+
 	<div class="row" style="width: 100%;">
 	   <div class="container" style="border-radius: 20px;">
 	      <div class="container" style="display: flex; flex-direction: column; text-align: center;">
