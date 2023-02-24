@@ -390,11 +390,12 @@ cursor:pointer;
   }
   
   .align-items-center{
+    padding-top: 5em;
 	margin-bottom: 5em;
   }
   
   .align-items-center-2{
-	padding-top: 5em;
+	padding-top: 9em;
 	margin-bottom: 5em;
   }
   
