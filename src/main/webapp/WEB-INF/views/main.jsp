@@ -64,7 +64,7 @@
 	<br><br>
 	<div class="container" style="width: 33%;">
 		<br>
-		<a href="${cpath}/CmBoard.do" class="Qbtn Qbtn-btn1">금융커뮤니티</a>
+		<a href="${cpath}/OX.do" class="Qbtn Qbtn-btn1">피싱OX퀴즈</a>
 		<br><br>
 	</div>
 	<br><br><br><br>

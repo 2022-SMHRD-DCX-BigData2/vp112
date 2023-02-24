@@ -73,7 +73,7 @@
              <a class="nav-link" href="${cpath}/sub.do"> 피해예방수칙</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="${cpath}/OX.do"> OX퀴즈</a>
+             <a class="nav-link" href="${cpath}/OX.do"> 피싱OX퀴즈</a>
            </li>
            <li class="nav-item">
              <a class="nav-link" href="${cpath}/ViBoard.do"> 금융사기예방교육</a>
